@@ -126,7 +126,7 @@
           </div>
           </div>
         </div>
-        <div class="col-12 col-lg-9">
+        <div class="col-12 col-xl-9">
           <!-- table header filtering - starts here -->
           <div class="table-filtering">
             <div class="filter-type">Filter op:</div>
@@ -142,57 +142,59 @@
           <div class="techniques-table-wrapper database">
             <table class="techniques-table table  table-bordered text-center w-100">
               <thead>
-                <tr class="border-bottom">
-                  <th class="text-left">Techniektitel</th>
-                  <th class="btn-1">Techniektype</th>
-                  <th class="btn-1">Studietype</th>
+                <tr class="border-bottom technical-title-row">
+                  <th class="technical-title-cell">Techniektitel</th>
+                  <th class="technique-type-cell">Techniektype</th>
+                  <th class="flag-cell">Studietype</th>
                 </tr>
               </thead>
               <tbody>
+
                 <!-- Table - row starts here -->
                 <tr class="border-bottom">
-                  <td class="text-left">Row 1</td>
-                  <td class="btn-1 icon-cell">
-                    <div class="rating-icon">-/0/+<sup>1</sup></div>
+                  <td class="technical-title-cell">Voldoende opslagcapaciteit voor de opvang van silosappen voorzien</td>
+                  <td class="technique-type-cell">
+                    <div class="technique-type-icon light-green">BBT</div>
                   </td>
-                  <td class="btn-1 icon-cell">
-                    <div class="rating-icon">-/0/+<sup>1</sup></div>
-                  </td>
-
-                </tr>
-                <!-- Table - row ends here -->
-                 <!-- Table - row starts here -->
-                <tr class="border-bottom">
-                  <td class="text-left">Row 2</td>
-                  <td class="btn-1 icon-cell">
-                    <div class="rating-icon">-/0/+<sup>1</sup></div>
-                  </td>
-                  <td class="btn-1 icon-cell">
-                    <div class="rating-icon">-/0/+<sup>1</sup></div>
+                  <td class="flag-cell">
+                    <div class="flag-icon eu">EU</div>
                   </td>
 
                 </tr>
                 <!-- Table - row ends here -->
                  <!-- Table - row starts here -->
                 <tr class="border-bottom">
-                  <td class="text-left">Row 3</td>
-                  <td class="btn-1 icon-cell">
-                    <div class="rating-icon">-/0/+<sup>1</sup></div>
+                  <td class="technical-title-cell">"Etsen" in waterig milieu van kunststoffen: vervangen door watervrije voorbehandeling zoals vlambehandeling, plasma- of corona-behandeling - voorafgaand aan lakken, lijmen, bedrukken e.d.</td>
+                  <td class="technique-type-cell">
+                    <div class="technique-type-icon dark-green">BBT (vgtg)</div>
                   </td>
-                  <td class="btn-1 icon-cell">
-                    <div class="rating-icon">-/0/+<sup>1</sup></div>
+                  <td class="flag-cell">
+                    <div class="flag-icon eu">EU</div>
                   </td>
 
                 </tr>
                 <!-- Table - row ends here -->
                  <!-- Table - row starts here -->
                 <tr class="border-bottom">
-                  <td class="text-left">Row 4</td>
-                  <td class="btn-1 icon-cell">
-                    <div class="rating-icon">-/0/+<sup>1</sup></div>
+                  <td class="technical-title-cell">'Dedicated' gebruik van reinigingsbanen/spoellijnen waarop gelijksoortige
+                    productcategorieënworden gereinigd</td>
+                  <td class="technique-type-cell">
+                    <div class="technique-type-icon yellow">Techniek in opkomst</div>
                   </td>
-                  <td class="btn-1 icon-cell">
-                    <div class="rating-icon">-/0/+<sup>1</sup></div>
+                  <td class="flag-cell">
+                    <div class="flag-icon eu">EU</div>
+                  </td>
+
+                </tr>
+                <!-- Table - row ends here -->
+                 <!-- Table - row starts here -->
+                <tr class="border-bottom">
+                  <td class="technical-title-cell">'Good housekeeping': audits onderhoud, operationeel personeel</td>
+                  <td class="technique-type-cell">
+                    <div class="technique-type-icon red">Geen BBT</div>
+                  </td>
+                  <td class="flag-cell">
+                    <div class="flag-icon eu">EU</div>
                   </td>
 
                 </tr>
@@ -216,7 +218,7 @@
 
   </main>
 
-  <script>
+  <script >
     // Import the Bootstrap bundle
 //
 // This includes Popper and all of Bootstrap's JS plugins, but now it's included from the html
@@ -712,6 +714,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
