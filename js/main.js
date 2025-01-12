@@ -365,7 +365,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const badge = document.createElement("div");
         badge.className = "badge";
         badge.innerHTML = `
-          ${blockTitle}: ${label.textContent.trim()}
+          ${blockTitle}: ${label.innerHTML.trim()}
           <span class="badge-close">&times;</span>
         `;
         filterContainer.appendChild(badge);
@@ -401,9 +401,9 @@ document.addEventListener("DOMContentLoaded", () => {
     list.style.maxHeight = `${list.scrollHeight}px`;
 
     title.addEventListener("click", () => {
-      console.log('clicked');
       if (list.classList.contains("closed")) {
         list.classList.remove("closed");
+        title.classList.remove("closed");
         list.style.maxHeight = `${list.scrollHeight}px`;
       } else {
         list.classList.add("closed");
@@ -420,17 +420,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchBlock = document.querySelector(".filter-block.search");
 
   if (searchInput && searchDropdown && searchBlock && searchList ) {
-
+   
     searchInput.addEventListener("input", () => {
       const query = searchInput.value.toLowerCase();
       if (query) {
         searchDropdown.classList.add("active");
+        searchBlock.classList.add("active");
         searchDropdown.querySelectorAll("div").forEach(item => {
           const text = item.textContent.toLowerCase();
           item.style.display = text.includes(query) ? "block" : "none";
         });
       } else {
         searchDropdown.classList.remove("active");
+        searchBlock.classList.remove("active");
       }
     });
   }
@@ -442,6 +444,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const selectedText = event.target.textContent.trim();
       searchInput.value = selectedText;
       searchDropdown.classList.remove("active");
+      searchBlock.classList.remove("active");
+      
 
       // Create badge
       const badge = document.createElement("div");
@@ -490,6 +494,55 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", (event) => {
     if (!searchInput.contains(event.target) && !searchDropdown.contains(event.target)) {
       searchDropdown.classList.remove("active");
+      searchBlock.classList.remove("active");
     }
   });
 });
+
+// /* script for opening and closing the canvas starts here */
+// document.addEventListener("DOMContentLoaded", () => {
+//   const toggleButton = document.querySelector('button[data-bs-toggle="offcanvas"]');
+//   const targetDiv = document.querySelector(".offcanvas.offcanvas-start.filter-block-canvas");
+//   const closeButton = document.querySelector(".btn-close.text-reset-canvas");
+
+//   // Check if elements exist before adding functionality
+//   if (toggleButton && targetDiv) {
+//     toggleButton.addEventListener("click", () => {
+//       if (targetDiv.classList.contains("show")) {
+//         // If the div has the class "show", toggle "hide" with a delay
+//         targetDiv.classList.remove("show");
+//         targetDiv.classList.add("hide");
+
+//         // Remove "hide" after 0.5 seconds
+//         setTimeout(() => {
+//           targetDiv.classList.remove("hide");
+//         }, 500);
+//       } else {
+//         // If the div doesn't have "show", add it
+//         targetDiv.classList.add("show");
+//       }
+//     });
+//   }
+
+//   // Check if the close button exists before adding functionality
+//   if (closeButton && targetDiv) {
+//     closeButton.addEventListener("click", () => {
+//       if (targetDiv.classList.contains("show")) {
+//         // Remove "show" and add "hide"
+//         targetDiv.classList.add("hide");
+        
+//         // / Remove "hide" after 0.2 seconds
+//         setTimeout(() => {
+//           targetDiv.classList.remove("show");
+//         }, 1500);
+
+//         // Remove "hide" after 0.5 seconds
+//         setTimeout(() => {
+//           targetDiv.classList.remove("hide");
+//         }, 1500);
+//       }
+//     });
+//   }
+// });
+
+// /* script for opening and closing the canvas ends here */

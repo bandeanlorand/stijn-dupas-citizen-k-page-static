@@ -1,0 +1,352 @@
+.technique-type-cell {
+  min-width: 192px;
+  text-align: left;
+}
+
+.technique-type-icon {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 8px;
+  gap: 8px;
+  height: 20px;
+  background: #5DE5A5;
+  border-radius: 30.4px;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1C4039;
+
+  &.light-green {
+    background: #5DE5A5;
+    color: #1C4039;
+  }
+
+  &.dark-green {
+    background: rgba(35, 123, 108, 1);
+    color: #fff;
+  }
+
+  &.yellow {
+    background: rgba(249, 203, 31, 1);
+    color: rgba(46, 51, 51, 1);
+    color: $primary;
+  }
+
+  &.red {
+    background: rgba(251, 31, 47, 1);
+    color: #fff;
+  }
+
+
+}
+
+.border-bottom.technical-title-row {
+  th {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: $primary;
+  }
+}
+
+.flag-cell {
+  padding: 12px 8px;
+  min-width: 112px;
+}
+
+.technical-title-cell {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: $primary;
+  text-align: left;
+  padding: 12px 8px;
+}
+
+.flag-icon {
+  padding-left: 28px;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  display: inline-block;
+  color: #7A7A7A;
+  background-repeat: no-repeat;
+  background-position: left center;
+
+  &.eu {
+    background-image: url("../images/europe-flag-icon.png");
+  }
+
+  &.vl {
+    background-image: url("../images/flanders-flag-icon.png");
+  }
+}
+
+.btn-filters-mobile {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 12px;
+  gap: 8px;
+  margin-right: 8px;
+  background: #0A6076;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  color: #fff;
+
+  &:hover {
+    opacity: 0.9;
+    background: #0A6076;
+    color: #fff;
+  }
+
+  @include media-breakpoint-up(xl) {
+    display: none;
+  }
+}
+
+.filter-block-canvas {
+  padding: 0px 36px 24px 36px;
+  overflow: auto;
+
+  @include media-breakpoint-up(xl) {
+    padding: 0px 36px 24px 0px;
+    overflow: unset;
+  }
+}
+
+.btn-reset-canvas {
+  align-self: flex-end;
+
+  @include media-breakpoint-up(xl) {
+    display: none;
+  }
+}
+
+/* search styles for technical table starts here */
+
+
+
+
+/* filter block for databse table checkbox ends here */
+.filter-block.search {
+
+  position: relative;
+  transition: width 0.3s linear;
+  background-color: #fff;
+  padding-bottom: 0;
+  border-bottom: 0;
+
+  .filter-block-list {
+    background: #FFFFFF;
+    z-index: 10;
+    @include media-breakpoint-down(xl) {
+      max-height: unset !important;
+    }
+  }
+
+  &.active {
+    
+    position: relative;
+    display: block;
+    width: 100%;
+    
+    @include media-breakpoint-up(xl) {
+      padding: 0 0 16px 16px;
+      width: calc(100% + 20px);
+      left: -20px;
+    }
+
+
+    .filter-block-list {
+      @include media-breakpoint-up(xl) {
+      width: 480px;
+      max-height: unset !important;
+      padding: 16px;
+      border: 1px solid #CED4DA;
+      box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -2px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    .input-group {
+      border: 5.5px solid rgba(93, 229, 165, 0.2);
+      border-radius: 8px;
+    }
+  }
+}
+
+.filter-block-list {
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  padding-bottom: 24px;
+
+  &.closed {
+    max-height: 0;
+    display: none;
+
+  }
+}
+
+
+.filter-block-title {
+  cursor: pointer;
+}
+
+.filter-block-title.closed {
+  color: #6c757d;
+}
+
+.search-dropdown {
+  position: relative;
+  background: white;
+  // border: 1px solid #ccc;
+  // padding: 11px 0 16px 0;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none;
+  z-index: 1000;
+
+  >div {
+    padding: 6px 8px 7px 8px;
+
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+
+    color: $primary;
+  }
+
+}
+
+.search-dropdown.active {
+  display: block;
+}
+
+.search-dropdown div {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.search-dropdown div:hover {
+  background-color: #f0f0f0;
+}
+
+.searched-element {
+  margin-top: -24px;
+  padding: 8px;
+  background: rgba(93, 229, 165, 0.6);
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #1C4039;
+
+  button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: transparent;
+    // background-color: #1C4039;
+    background-image: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM6.28033 5.21967C5.98744 4.92678 5.51256 4.92678 5.21967 5.21967C4.92678 5.51256 4.92678 5.98744 5.21967 6.28033L6.93934 8L5.21967 9.71967C4.92678 10.0126 4.92678 10.4874 5.21967 10.7803C5.51256 11.0732 5.98744 11.0732 6.28033 10.7803L8 9.06066L9.71967 10.7803C10.0126 11.0732 10.4874 11.0732 10.7803 10.7803C11.0732 10.4874 11.0732 10.0126 10.7803 9.71967L9.06066 8L10.7803 6.28033C11.0732 5.98744 11.0732 5.51256 10.7803 5.21967C10.4874 4.92678 10.0126 4.92678 9.71967 5.21967L8 6.93934L6.28033 5.21967Z" fill="%231C4039"/></svg>');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+
+
+@include media-breakpoint-up(xl) {
+  .offcanvas.offcanvas-start.filter-block-canvas {
+    position: relative;
+    transform: none;
+    visibility: visible;
+    display: block;
+    box-shadow: none;
+
+    +.offcanvas-backdrop.fade {
+      display: none;
+    }
+
+    .btn-close.text-reset {
+      display: none;
+    }
+  }
+
+}
+
+
+
+.filter-block.search {
+  .input-group-text {
+    width: 36px;
+    height: 36px;
+    display: block;
+    position: absolute;
+
+
+    &::before {
+      content: '';
+      background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 3.125C5.6434 3.125 3.125 5.6434 3.125 8.75C3.125 11.8566 5.6434 14.375 8.75 14.375C10.3035 14.375 11.7089 13.7461 12.7275 12.7275C13.7461 11.7089 14.375 10.3035 14.375 8.75C14.375 5.6434 11.8566 3.125 8.75 3.125ZM1.875 8.75C1.875 4.95304 4.95304 1.875 8.75 1.875C12.547 1.875 15.625 4.95304 15.625 8.75C15.625 10.4232 15.0266 11.9575 14.0333 13.1494L17.9419 17.0581C18.186 17.3021 18.186 17.6979 17.9419 17.9419C17.6979 18.186 17.3021 18.186 17.0581 17.9419L13.1494 14.0333C11.9575 15.0266 10.4232 15.625 8.75 15.625C4.95304 15.625 1.875 12.547 1.875 8.75Z" fill="%232E3333"/></svg>');
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 20px;
+      height: 20px;
+      display: block;
+      position: absolute;
+      top: 8px;
+      left: 8px;
+    }
+
+  }
+
+  input.form-control.search-input {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 12px 8px 48px;
+    gap: 8px;
+    height: 36px;
+    min-height: 32px;
+    border: 1px solid #d5d6d6;
+    background: #FFFFFF;
+    border-radius: 8px;
+
+    &:focus-visible {
+      outline: 0;
+      border: 1px solid #2f7d69;
+
+    }
+  }
+
+  .search-dropdown {}
+}

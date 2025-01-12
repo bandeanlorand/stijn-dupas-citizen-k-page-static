@@ -7,18 +7,13 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  /* identical to box height, or 143% */
   align-items: center;
   color: #7A7A7A;
   border-radius: 50%;
   background-image: url('../images/rating-elements.svg');
   background-repeat: no-repeat;
-  position: relative;
-
-  sup{
-    right: -4px;
-  position: absolute;
-  top: 4px;
-  }
+  // background-position: 0px -20px;
 
   &.ra-0 {
     background-position: -20px -20px;

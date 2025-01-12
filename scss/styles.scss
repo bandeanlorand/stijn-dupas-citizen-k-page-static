@@ -105,9 +105,6 @@ $header-title-color:#237B6C;
   // --bs-breakpoint-xl: 1200px;
   // --bs-breakpoint-xxl: 1400px;
 }
-
-body {}
-
 .animated-height {
   transform: scaleY(1);
   transform-origin: top;
@@ -129,7 +126,6 @@ img {
 }
 
 @media (min-width: 1440px) {
-  body {}
 
   .container {
     max-width: 1440px;
@@ -167,6 +163,14 @@ nav ol.breadcrumb {
     line-height: 20px;
     padding: 8px 0 8px 0;
     position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 50%;
+
+    @include media-breakpoint-up(xl) {
+      max-width: 30%;
+    }
 
     &::after {
       content: '';
@@ -188,9 +192,10 @@ nav ol.breadcrumb {
 
     +.breadcrumb-item {
       padding-left: var(--bs-breadcrumb-item-padding-x);
+      cursor: default;
 
       &::after {
-        width: calc(100% - 30px);
+        width: calc(100% - 26px);
       }
 
       &:before {
@@ -208,8 +213,6 @@ nav ol.breadcrumb {
 
     &.active {
       color: $primary;
-
-      a {}
     }
   }
 }
@@ -611,17 +614,17 @@ article.mb-4 {
 .toggle-text {
   overflow: hidden;
   max-height: 0;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s linear;
   margin-bottom: -8px;
 }
 
 .toggle-text.expanded {
-  max-height: unset;
+  max-height: 100vh;
   margin-bottom: 8px;
 }
 
 .toggle-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   cursor: pointer;
   font-family: 'Work Sans';
@@ -704,7 +707,6 @@ nav.techniques-table {
   align-content: center;
 
   .pagination-info {
-    align-self: flex-end;
     font-family: 'Work Sans';
     font-style: normal;
     font-weight: 400;
@@ -1451,6 +1453,30 @@ iframe {
     font-size: 16px;
     line-height: 28px;
     color: $primary;
+    display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+
+    &::after{
+      content: "";
+  background-image: url("data:image/svg+xml,<svg width=\"6\" height=\"10\" viewBox=\"0 0 6 10\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0.209376 9.76983C-0.0777189 9.47125 -0.0684094 8.99647 0.230169 8.70937L4.16792 5L0.230169 1.29062C-0.0684099 1.00353 -0.0777193 0.528747 0.209376 0.230167C0.496471 -0.0684109 0.971253 -0.0777207 1.26983 0.209374L5.76983 4.45937C5.91689 4.60078 6 4.79599 6 5C6 5.20401 5.91689 5.39922 5.76983 5.54062L1.26983 9.79062C0.971254 10.0777 0.496471 10.0684 0.209376 9.76983Z\" fill=\"%232E3333\"/></svg>");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 20px;
+  height: 20px;
+  margin-right: 0px;
+  margin-left: 6px;
+  display: block;
+  transition: transform 0.2s;
+  flex: 0 0 20px;
+  margin-left: auto;
+  transform: rotate(-90deg);
+    }
+
+    &.closed{
+      &::after{transform: rotate(90deg);}
+    }
   }
 
   .filter-block-list {
@@ -1486,168 +1512,4 @@ iframe {
 
 }
 
-/* filter block for databse table checkbox ends here */
-.filter-block-list {
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
-}
-
-.filter-block-list.closed {
-  max-height: 0;
-}
-
-.filter-block-title {
-  cursor: pointer;
-}
-
-.filter-block-title.closed {
-  color: #6c757d;
-}
-
-.search-dropdown {
-  position: absolute;
-  background: white;
-  border: 1px solid #ccc;
-  width: 100%;
-  max-height: 200px;
-  overflow-y: auto;
-  display: none;
-  z-index: 1000;
-}
-
-.search-dropdown.active {
-  display: block;
-}
-
-.search-dropdown div {
-  padding: 8px;
-  cursor: pointer;
-}
-
-.search-dropdown div:hover {
-  background-color: #f0f0f0;
-}
-
-.searched-element {
-  margin-top: 10px;
-  padding: 8px;
-  background: #e9ecef;
-  border-radius: 4px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.searched-element button {
-  background: none;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  color: #6c757d;
-}
-
-@include media-breakpoint-up(xl) {
-  .offcanvas.offcanvas-start.filter-block-canvas {
-    position: relative;
-    transform: none;
-    visibility: visible;
-    display: block;
-    box-shadow: none;
-
-    +.offcanvas-backdrop.fade {
-      display: none;
-    }
-
-    .btn-close.text-reset {
-      display: none;
-    }
-  }
-
-}
-.technique-type-cell{
-  min-width: 192px;
-  text-align: left;
-}
-.technique-type-icon {
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 8px;
-  gap: 8px;
-  height: 20px;
-  background: #5DE5A5;
-  border-radius: 30.4px;
-  font-family: 'Work Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  color: #1C4039;
-
-  &.light-green {
-    background: #5DE5A5;
-    color: #1C4039;
-  }
-
-  &.dark-green {
-    background: rgba(35, 123, 108, 1);
-    color: #fff;
-  }
-
-  &.yellow {
-    background: rgba(249, 203, 31, 1);
-    color: rgba(46, 51, 51, 1);
-    color: $primary;
-  }
-
-  &.red {
-    background: rgba(251, 31, 47, 1);
-    color: #fff;
-  }
-
-  
-}
-.border-bottom.technical-title-row{
-th{
-  font-family: 'Work Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 20px;
-color: $primary;
-}
-}
-.flag-cell{
-  padding:12px 8px;
-  min-width: 112px;
-}
-.technical-title-cell{
-font-family: 'Work Sans';
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 20px;
-color: $primary;
-text-align: left;
-padding:12px 8px;
-}
-.flag-icon{
-  padding-left: 28px;
-  font-family: 'Work Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  display: inline-block;
-  color: #7A7A7A;
-  background-repeat: no-repeat;
-  background-position: left center;
-
-  &.eu{
-    background-image: url("../images/europe-flag-icon.png");
-  }
-  &.vl{
-    background-image: url("../images/flanders-flag-icon.png");
-  }
-}
+@import '_table-technical';
