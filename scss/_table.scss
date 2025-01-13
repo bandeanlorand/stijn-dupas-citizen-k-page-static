@@ -284,7 +284,7 @@ top:-1px
         cursor: pointer;
 
         &:hover {
-          background: $secondary-green;
+          background: rgba(93, 229, 165, 0.1);
           color: $primary-green;
         }
       }
@@ -756,7 +756,7 @@ top:-1px
   }
 }
 
-table tbody tr:not(.title-row) {
+table tbody tr:not(.title-row):not(.title-row.light) {
   &:hover {
     background-color: rgba(93, 229, 165, 0.1);
     cursor: default;
@@ -846,12 +846,8 @@ table.techniques-table {
     text-align: left;
 
     &.light {
-      /* Backdrop */
-
       background: rgba(35, 123, 108, 0.1);
       color: #268675;
-
-
     }
   }
 
