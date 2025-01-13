@@ -228,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeButton = document.getElementById("closePopupCBButton");
   const addFilterButtonCheckbox = document.getElementById("addFilterButtonCheckbox");
   const filterContainer = document.querySelector(".filter-nr-container");
-  const checkboxes = document.querySelectorAll(".form-check-input");
+  const checkboxes = document.querySelectorAll(".form-check-input.popup-checkbox");
 
   // Function to toggle the popup
   const togglePopup = () => {
@@ -368,7 +368,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Ensure the checkbox is inside a valid filter block
         if (!filterBlock) {
-          console.error("Error: Checkbox is not inside a .filter-block.");
+          // console.error("Error: Checkbox is not inside a .filter-block.");
           return;
         }
 
@@ -376,7 +376,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Ensure the filter block has a valid title
         if (!blockTitleElement) {
-          console.error("Error: No .filter-block-title found in .filter-block.");
+          // console.error("Error: No .filter-block-title found in .filter-block.");
           return;
         }
 
