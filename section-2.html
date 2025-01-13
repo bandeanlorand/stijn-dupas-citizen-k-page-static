@@ -27,19 +27,24 @@
             </h1>
             <p>Doorzoekbare verzameling van milieutechnieken uit Vlaamse en Europese studies</p>
             <div class="toggle-text" id="collapsible-text">
-              <p>Onze BBT-databank biedt een compleet overzicht van Beste Beschikbare Technieken en andere milieutechnieken uit zowel Vlaamse BBT-studies als Europese BREFS.
-               </p>
-               <b>Zo vindt u snel de juiste techniek:</b>
+              <p>Onze BBT-databank biedt een compleet overzicht van Beste Beschikbare Technieken en andere
+                milieutechnieken uit zowel Vlaamse BBT-studies als Europese BREFS.
+              </p>
+              <b>Zo vindt u snel de juiste techniek:</b>
 
-<ul>
-    <li>Start met een complete lijst van alle beschikbare technieken</li>
-    <li>Filter op één of meerdere sectoren, subsectoren of specifieke deelprocessen</li>
-    <li>Verfijn uw zoekresultaten op milieuaspect, waaronder specifieke parameters voor lucht en afvalwater</li>
-    <li>Selecteer het gewenste techniektype (BBT, Geen BBT, Techniek in opkomst) of studietype (BBT of BREF)</li>
-</ul>
-<p>Per techniek vindt u gedetailleerde informatie met directe links naar de bijhorende studies. Komt u via een studiepagina? Dan worden de relevante sectoren automatisch geselecteerd.</p>
+              <ul>
+                <li>Start met een complete lijst van alle beschikbare technieken</li>
+                <li>Filter op één of meerdere sectoren, subsectoren of specifieke deelprocessen</li>
+                <li>Verfijn uw zoekresultaten op milieuaspect, waaronder specifieke parameters voor lucht en afvalwater
+                </li>
+                <li>Selecteer het gewenste techniektype (BBT, Geen BBT, Techniek in opkomst) of studietype (BBT of BREF)
+                </li>
+              </ul>
+              <p>Per techniek vindt u gedetailleerde informatie met directe links naar de bijhorende studies. Komt u via
+                een studiepagina? Dan worden de relevante sectoren automatisch geselecteerd.</p>
 
-<p>Hulp nodig bij het gebruik van de databank? Contacteer ons via <a href="mailto:bbt@vito.be">bbt@vito.be</a>.</p>
+              <p>Hulp nodig bij het gebruik van de databank? Contacteer ons via <a
+                  href="mailto:bbt@vito.be">bbt@vito.be</a>.</p>
 
             </div>
             <a href="javascript:void(0);" class="toggle-link" id="toggle-button">
@@ -47,95 +52,182 @@
             </a>
           </div>
         </div>
-        
+
       </div>
     </header>
 
-   
+
 
     <section class="content">
       <div class="row">
         <div class="col-12 col-lg-3">
-        <div class="offcanvas offcanvas-start filter-block-canvas" tabindex="-1" id="showFiltersMobile" aria-labelledby="offcanvasExampleLabel">
-                <button type="button" class="btn-close btn-reset-canvas" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          <div class="filter-block">
-            <h3 class="filter-block-title">Sectoren</h3>
-            <div class="filter-block-list" >
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="sector1">
-                <label class="form-check-label" for="sector1">Afvalverwerking</label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="sector2">
-                <label class="form-check-label" for="sector2">Bouw<sup>(36)</sup></label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="sector3">
-                <label class="form-check-label" for="sector3">Diensten<sup>(437)</sup></label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="sector4">
-                <label class="form-check-label" for="sector4">Energie<sup>(437)</sup></label>
-              </div>
-            </div>
-          </div>
-          <div class="filter-block">
-            <h3 class="filter-block-title">Milieuaspect</h3>
-            <div class="filter-block-list" >
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="aspect1">
-                <label class="form-check-label" for="aspect1">Lucht<sup>(2189)</sup></label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="aspect2">
-                <label class="form-check-label" for="aspect2">Afvalwater<sup>(1405)</sup></label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="aspect3">
-                <label class="form-check-label" for="aspect3">watergebruik<sup>(524)</sup></label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="aspect4">
-                <label class="form-check-label" for="aspect4">Afval en materialen<sup>(886)</sup></label>
-              </div>
-            </div>
-          </div>
-          
+          <div class="offcanvas offcanvas-start filter-block-canvas" tabindex="-1" id="showFiltersMobile"
+            aria-labelledby="offcanvasExampleLabel">
+            <button type="button" class="btn-close btn-reset-canvas" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
+            <div class="filter-block">
+              <h3 class="filter-block-title">Sectoren</h3>
+              <div class="filter-block-list">
 
-          
-          <div class="filter-block search">
-            <h3 class="filter-block-title">Studie</h3>
-            <div class="filter-block-list" style="max-height: 1000px;">
-              <div class="input-group">
-                <span class="input-group-text"><i class="bi bi-search"></i></span>
-                <input type="text" class="form-control search-input" placeholder="Zoek een studie">
-              </div>
-              <div class="search-dropdown">
-                <div>Anorganische bulkchemicaliën (vast en overig) (LVIC-S) (226)</div>
-                <div>Anorganische fijnchemicaliën (SIC) (96)</div>
-                <div>Asfaltcentrales (70)</div>
-                <div>Behandeling en beheer van afvalwater en afvalgas in de chemiesector (CWW) (31)</div>
-                <div>Behandeling van bodemas van huisvuilverbranding (23)</div>
-                <div>Beton (94)</div>
-                <div>Bodemsaneringsprojecten en grondreinigingscentra (52)</div>
-                <div>Bulk organische chemie (LVOC) (105)</div>
-                <div>Car- en truckwash (50)</div>
-                <div>Carrosserieherstel- en carrosseriebouwbedrijven (48)</div>
+                <!-- table filter group - first group -  starts here  -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="sector1">
+                  <label class="form-check-label" for="sector1">Afvalverwerking <sup>(469)</sup></label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="sector2">
+                  <label class="form-check-label" for="sector2">Bouw <sup>(36)</sup></label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="sector3">
+                  <label class="form-check-label" for="sector3">Chemie <sup>(909)</sup></label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="sector4">
+                  <label class="form-check-label" for="sector4">Diensten <sup>(437)</sup></label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="sector5">
+                  <label class="form-check-label" for="sector5">Energie <sup>(341)</sup></label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="sector6">
+                  <label class="form-check-label" for="sector6">Kunststoffen <sup>(483)</sup></label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="sector7">
+                  <label class="form-check-label" for="sector7">Landbouw & veeteelt <sup>(310)</sup></label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="sector8">
+                  <label class="form-check-label" for="sector8">Metalen <sup>(1082)</sup></label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="sector9">
+                  <label class="form-check-label" for="sector9">Minerale producten <sup>(490)</sup></label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="sector10">
+                  <label class="form-check-label" for="sector10">Papier & hout <sup>(297)</sup></label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="sector11">
+                  <label class="form-check-label" for="sector11">Sectoroverschrijdend <sup>(612)</sup></label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="sector12">
+                  <label class="form-check-label" for="sector12">Textiel & leer <sup>(620)</sup></label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="sector13">
+                  <label class="form-check-label" for="sector13">Transport <sup>(200)</sup></label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="sector14">
+                  <label class="form-check-label" for="sector14">Voeding <sup>(288)</sup></label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="sector15">
+                  <label class="form-check-label" for="sector15">Overige <sup>(12)</sup></label>
+                </div>
+
               </div>
             </div>
-          </div>
+            <!-- table filter group - first group -  ends here  -->
+            <!-- table filter group - second group -  starts here  -->
+            <div class="filter-block">
+              <h3 class="filter-block-title">Milieuaspect</h3>
+              <div class="filter-block-list">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="milieuaspect1">
+                  <label class="form-check-label" for="milieuaspect1">Lucht<sup>(2189)</sup></label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="milieuaspect2">
+                  <label class="form-check-label" for="milieuaspect2">Afvalwater<sup>(1405)</sup></label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="milieuaspect3">
+                  <label class="form-check-label" for="milieuaspect3">watergebruik<sup>(524)</sup></label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="milieuaspect4">
+                  <label class="form-check-label" for="milieuaspect4">Afval en materialen(886)</sup></label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="milieuaspect5">
+                  <label class="form-check-label" for="milieuaspect5">Grondstoffen en chemicaliën<sup>(807)</sup></label>
+                </div>
+              </div>
+            </div>
+            <!-- table filter group - second group -  ends here  -->
+            <!-- table filter group - third group -  starts here  -->
+            <div class="filter-block">
+              <h3 class="filter-block-title">Techniektype</h3>
+              <div class="filter-block-list">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="techniektype1">
+                  <label class="form-check-label" for="techniektype1">BBT<sup>(4910)</sup></label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="techniektype2">
+                  <label class="form-check-label" for="techniektype2">Geen BBT<sup>(332)</sup></label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="techniektype3">
+                  <label class="form-check-label" for="techniektype3">Techniek in opkomst<sup>(197)</sup></label>
+                </div>
+              </div>
+            </div>
+            <!-- table filter group - third group -  ends here  -->
+             <!-- table filter group - fourth group -  starts here  -->
+            <div class="filter-block">
+              <h3 class="filter-block-title">Studietype</h3>
+              <div class="filter-block-list">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="studietype1">
+                  <label class="form-check-label" for="studietype1">Vlaamse BBT<sup>(3171)</sup></label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="studietype2">
+                  <label class="form-check-label" for="studietype2">Europese BREF<sup>(2268)</sup></label>
+                </div>
+              </div>
+            </div>
+            <!-- table filter group - fourth group -  ends here  -->
+            <div class="filter-block search">
+              <h3 class="filter-block-title">Studie</h3>
+              <div class="filter-block-list" style="max-height: 1000px;">
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-search"></i></span>
+                  <input type="text" class="form-control search-input" placeholder="Zoek een studie">
+                </div>
+                <div class="search-dropdown">
+                  <div>Anorganische bulkchemicaliën (vast en overig) (LVIC-S) (226)</div>
+                  <div>Anorganische fijnchemicaliën (SIC) (96)</div>
+                  <div>Asfaltcentrales (70)</div>
+                  <div>Behandeling en beheer van afvalwater en afvalgas in de chemiesector (CWW) (31)</div>
+                  <div>Behandeling van bodemas van huisvuilverbranding (23)</div>
+                  <div>Beton (94)</div>
+                  <div>Bodemsaneringsprojecten en grondreinigingscentra (52)</div>
+                  <div>Bulk organische chemie (LVOC) (105)</div>
+                  <div>Car- en truckwash (50)</div>
+                  <div>Carrosserieherstel- en carrosseriebouwbedrijven (48)</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-12 col-xl-9">
           <!-- table header filtering - starts here -->
           <div class="table-filtering">
             <button type="button" class="btn btn-filters-mobile" data-bs-toggle="offcanvas"
-            data-bs-target="#showFiltersMobile">Filters weergeven</button>
+              data-bs-target="#showFiltersMobile">Filters weergeven</button>
             <div class="filter-type">Filter op:</div>
 
             <div class="filter-nr"></div>
             <!-- dropdown popup BBT filtering ends here -->
-            <div class="pagination-info">Overzicht: <b>103 van 120</b> publicaties  </div>
+            <div class="pagination-info">Overzicht: <b>103 van 120</b> publicaties </div>
 
           </div>
           <div class="filter-container filter-nr-container"></div>
@@ -154,7 +246,8 @@
 
                 <!-- Table - row starts here -->
                 <tr class="border-bottom">
-                  <td class="technical-title-cell">Voldoende opslagcapaciteit voor de opvang van silosappen voorzien</td>
+                  <td class="technical-title-cell">Voldoende opslagcapaciteit voor de opvang van silosappen voorzien
+                  </td>
                   <td class="technique-type-cell">
                     <div class="technique-type-icon light-green">BBT</div>
                   </td>
@@ -163,9 +256,11 @@
                   </td>
                 </tr>
                 <!-- Table - row ends here -->
-                 <!-- Table - row starts here -->
+                <!-- Table - row starts here -->
                 <tr class="border-bottom">
-                  <td class="technical-title-cell">"Etsen" in waterig milieu van kunststoffen: vervangen door watervrije voorbehandeling zoals vlambehandeling, plasma- of corona-behandeling - voorafgaand aan lakken, lijmen, bedrukken e.d.</td>
+                  <td class="technical-title-cell">"Etsen" in waterig milieu van kunststoffen: vervangen door watervrije
+                    voorbehandeling zoals vlambehandeling, plasma- of corona-behandeling - voorafgaand aan lakken,
+                    lijmen, bedrukken e.d.</td>
                   <td class="technique-type-cell">
                     <div class="technique-type-icon dark-green">BBT (vgtg)</div>
                   </td>
@@ -174,9 +269,10 @@
                   </td>
                 </tr>
                 <!-- Table - row ends here -->
-                 <!-- Table - row starts here -->
+                <!-- Table - row starts here -->
                 <tr class="border-bottom">
-                  <td class="technical-title-cell">'Dedicated' gebruik van reinigingsbanen/spoellijnen waarop gelijksoortige
+                  <td class="technical-title-cell">'Dedicated' gebruik van reinigingsbanen/spoellijnen waarop
+                    gelijksoortige
                     productcategorieënworden gereinigd</td>
                   <td class="technique-type-cell">
                     <div class="technique-type-icon yellow">Techniek in opkomst</div>
@@ -186,7 +282,7 @@
                   </td>
                 </tr>
                 <!-- Table - row ends here -->
-                 <!-- Table - row starts here -->
+                <!-- Table - row starts here -->
                 <tr class="border-bottom">
                   <td class="technical-title-cell">'Good housekeeping': audits onderhoud, operationeel personeel</td>
                   <td class="technique-type-cell">
@@ -197,9 +293,10 @@
                   </td>
                 </tr>
                 <!-- Table - row ends here -->
-                 <!-- Table - row starts here -->
+                <!-- Table - row starts here -->
                 <tr class="border-bottom">
-                  <td class="technical-title-cell">Voldoende opslagcapaciteit voor de opvang van silosappen voorzien</td>
+                  <td class="technical-title-cell">Voldoende opslagcapaciteit voor de opvang van silosappen voorzien
+                  </td>
                   <td class="technique-type-cell">
                     <div class="technique-type-icon light-green">BBT</div>
                   </td>
@@ -208,9 +305,11 @@
                   </td>
                 </tr>
                 <!-- Table - row ends here -->
-                 <!-- Table - row starts here -->
+                <!-- Table - row starts here -->
                 <tr class="border-bottom">
-                  <td class="technical-title-cell">"Etsen" in waterig milieu van kunststoffen: vervangen door watervrije voorbehandeling zoals vlambehandeling, plasma- of corona-behandeling - voorafgaand aan lakken, lijmen, bedrukken e.d.</td>
+                  <td class="technical-title-cell">"Etsen" in waterig milieu van kunststoffen: vervangen door watervrije
+                    voorbehandeling zoals vlambehandeling, plasma- of corona-behandeling - voorafgaand aan lakken,
+                    lijmen, bedrukken e.d.</td>
                   <td class="technique-type-cell">
                     <div class="technique-type-icon dark-green">BBT (vgtg)</div>
                   </td>
@@ -219,9 +318,10 @@
                   </td>
                 </tr>
                 <!-- Table - row ends here -->
-                 <!-- Table - row starts here -->
+                <!-- Table - row starts here -->
                 <tr class="border-bottom">
-                  <td class="technical-title-cell">'Dedicated' gebruik van reinigingsbanen/spoellijnen waarop gelijksoortige
+                  <td class="technical-title-cell">'Dedicated' gebruik van reinigingsbanen/spoellijnen waarop
+                    gelijksoortige
                     productcategorieënworden gereinigd</td>
                   <td class="technique-type-cell">
                     <div class="technique-type-icon yellow">Techniek in opkomst</div>
@@ -231,7 +331,7 @@
                   </td>
                 </tr>
                 <!-- Table - row ends here -->
-                 <!-- Table - row starts here -->
+                <!-- Table - row starts here -->
                 <tr class="border-bottom">
                   <td class="technical-title-cell">'Good housekeeping': audits onderhoud, operationeel personeel</td>
                   <td class="technique-type-cell">
@@ -242,9 +342,10 @@
                   </td>
                 </tr>
                 <!-- Table - row ends here -->
-                 <!-- Table - row starts here -->
+                <!-- Table - row starts here -->
                 <tr class="border-bottom">
-                  <td class="technical-title-cell">Voldoende opslagcapaciteit voor de opvang van silosappen voorzien</td>
+                  <td class="technical-title-cell">Voldoende opslagcapaciteit voor de opvang van silosappen voorzien
+                  </td>
                   <td class="technique-type-cell">
                     <div class="technique-type-icon light-green">BBT</div>
                   </td>
@@ -253,9 +354,11 @@
                   </td>
                 </tr>
                 <!-- Table - row ends here -->
-                 <!-- Table - row starts here -->
+                <!-- Table - row starts here -->
                 <tr class="border-bottom">
-                  <td class="technical-title-cell">"Etsen" in waterig milieu van kunststoffen: vervangen door watervrije voorbehandeling zoals vlambehandeling, plasma- of corona-behandeling - voorafgaand aan lakken, lijmen, bedrukken e.d.</td>
+                  <td class="technical-title-cell">"Etsen" in waterig milieu van kunststoffen: vervangen door watervrije
+                    voorbehandeling zoals vlambehandeling, plasma- of corona-behandeling - voorafgaand aan lakken,
+                    lijmen, bedrukken e.d.</td>
                   <td class="technique-type-cell">
                     <div class="technique-type-icon dark-green">BBT (vgtg)</div>
                   </td>
@@ -264,9 +367,10 @@
                   </td>
                 </tr>
                 <!-- Table - row ends here -->
-                 <!-- Table - row starts here -->
+                <!-- Table - row starts here -->
                 <tr class="border-bottom">
-                  <td class="technical-title-cell">'Dedicated' gebruik van reinigingsbanen/spoellijnen waarop gelijksoortige
+                  <td class="technical-title-cell">'Dedicated' gebruik van reinigingsbanen/spoellijnen waarop
+                    gelijksoortige
                     productcategorieënworden gereinigd</td>
                   <td class="technique-type-cell">
                     <div class="technique-type-icon yellow">Techniek in opkomst</div>
@@ -276,7 +380,7 @@
                   </td>
                 </tr>
                 <!-- Table - row ends here -->
-                 <!-- Table - row starts here -->
+                <!-- Table - row starts here -->
                 <tr class="border-bottom">
                   <td class="technical-title-cell">'Good housekeeping': audits onderhoud, operationeel personeel</td>
                   <td class="technique-type-cell">
@@ -287,9 +391,10 @@
                   </td>
                 </tr>
                 <!-- Table - row ends here -->
-                 <!-- Table - row starts here -->
+                <!-- Table - row starts here -->
                 <tr class="border-bottom">
-                  <td class="technical-title-cell">Voldoende opslagcapaciteit voor de opvang van silosappen voorzien</td>
+                  <td class="technical-title-cell">Voldoende opslagcapaciteit voor de opvang van silosappen voorzien
+                  </td>
                   <td class="technique-type-cell">
                     <div class="technique-type-icon light-green">BBT</div>
                   </td>
@@ -298,9 +403,11 @@
                   </td>
                 </tr>
                 <!-- Table - row ends here -->
-                 <!-- Table - row starts here -->
+                <!-- Table - row starts here -->
                 <tr class="border-bottom">
-                  <td class="technical-title-cell">"Etsen" in waterig milieu van kunststoffen: vervangen door watervrije voorbehandeling zoals vlambehandeling, plasma- of corona-behandeling - voorafgaand aan lakken, lijmen, bedrukken e.d.</td>
+                  <td class="technical-title-cell">"Etsen" in waterig milieu van kunststoffen: vervangen door watervrije
+                    voorbehandeling zoals vlambehandeling, plasma- of corona-behandeling - voorafgaand aan lakken,
+                    lijmen, bedrukken e.d.</td>
                   <td class="technique-type-cell">
                     <div class="technique-type-icon dark-green">BBT (vgtg)</div>
                   </td>
@@ -309,9 +416,10 @@
                   </td>
                 </tr>
                 <!-- Table - row ends here -->
-                 <!-- Table - row starts here -->
+                <!-- Table - row starts here -->
                 <tr class="border-bottom">
-                  <td class="technical-title-cell">'Dedicated' gebruik van reinigingsbanen/spoellijnen waarop gelijksoortige
+                  <td class="technical-title-cell">'Dedicated' gebruik van reinigingsbanen/spoellijnen waarop
+                    gelijksoortige
                     productcategorieënworden gereinigd</td>
                   <td class="technique-type-cell">
                     <div class="technique-type-icon yellow">Techniek in opkomst</div>
@@ -321,7 +429,7 @@
                   </td>
                 </tr>
                 <!-- Table - row ends here -->
-                 <!-- Table - row starts here -->
+                <!-- Table - row starts here -->
                 <tr class="border-bottom">
                   <td class="technical-title-cell">'Good housekeeping': audits onderhoud, operationeel personeel</td>
                   <td class="technique-type-cell">
@@ -332,9 +440,10 @@
                   </td>
                 </tr>
                 <!-- Table - row ends here -->
-                 <!-- Table - row starts here -->
+                <!-- Table - row starts here -->
                 <tr class="border-bottom">
-                  <td class="technical-title-cell">Voldoende opslagcapaciteit voor de opvang van silosappen voorzien</td>
+                  <td class="technical-title-cell">Voldoende opslagcapaciteit voor de opvang van silosappen voorzien
+                  </td>
                   <td class="technique-type-cell">
                     <div class="technique-type-icon light-green">BBT</div>
                   </td>
@@ -343,9 +452,11 @@
                   </td>
                 </tr>
                 <!-- Table - row ends here -->
-                 <!-- Table - row starts here -->
+                <!-- Table - row starts here -->
                 <tr class="border-bottom">
-                  <td class="technical-title-cell">"Etsen" in waterig milieu van kunststoffen: vervangen door watervrije voorbehandeling zoals vlambehandeling, plasma- of corona-behandeling - voorafgaand aan lakken, lijmen, bedrukken e.d.</td>
+                  <td class="technical-title-cell">"Etsen" in waterig milieu van kunststoffen: vervangen door watervrije
+                    voorbehandeling zoals vlambehandeling, plasma- of corona-behandeling - voorafgaand aan lakken,
+                    lijmen, bedrukken e.d.</td>
                   <td class="technique-type-cell">
                     <div class="technique-type-icon dark-green">BBT (vgtg)</div>
                   </td>
@@ -354,9 +465,10 @@
                   </td>
                 </tr>
                 <!-- Table - row ends here -->
-                 <!-- Table - row starts here -->
+                <!-- Table - row starts here -->
                 <tr class="border-bottom">
-                  <td class="technical-title-cell">'Dedicated' gebruik van reinigingsbanen/spoellijnen waarop gelijksoortige
+                  <td class="technical-title-cell">'Dedicated' gebruik van reinigingsbanen/spoellijnen waarop
+                    gelijksoortige
                     productcategorieënworden gereinigd</td>
                   <td class="technique-type-cell">
                     <div class="technique-type-icon yellow">Techniek in opkomst</div>
@@ -366,7 +478,7 @@
                   </td>
                 </tr>
                 <!-- Table - row ends here -->
-                 <!-- Table - row starts here -->
+                <!-- Table - row starts here -->
                 <tr class="border-bottom">
                   <td class="technical-title-cell">'Good housekeeping': audits onderhoud, operationeel personeel</td>
                   <td class="technique-type-cell">
@@ -377,7 +489,7 @@
                   </td>
                 </tr>
                 <!-- Table - row ends here -->
-                
+
               </tbody>
             </table>
             <!-- Table ends here-->
@@ -395,7 +507,9 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Yantramanav:wght@100;300;400;500;700;900&display=swap"
     rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 </body>
 
 </html>
