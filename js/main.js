@@ -12,7 +12,7 @@ document.querySelectorAll('[data-bs-toggle="popover"]')
     new bootstrap.Popover(popover)
   })
 
-  document.querySelectorAll('.menu a').forEach(menuLink => {
+  document.querySelectorAll('.link-menu a').forEach(menuLink => {
     menuLink.addEventListener('click', function (e) {
         const target = this.getAttribute('data-target');
 
@@ -24,7 +24,7 @@ document.querySelectorAll('[data-bs-toggle="popover"]')
         }
 
         // Remove active class from all menu items
-        document.querySelectorAll('.menu a').forEach(link => link.classList.remove('active'));
+        document.querySelectorAll('.link-menu a').forEach(link => link.classList.remove('active'));
         this.classList.add('active');
 
         // Hide all content sections
@@ -37,9 +37,6 @@ document.querySelectorAll('[data-bs-toggle="popover"]')
 
         // Automatically open parent menus if active
         openParentMenus(this);
-
-        // Check if all top-level submenus are closed and show default content
-        checkDefaultContent();
     });
 });
 
@@ -67,13 +64,15 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       // Add active class to the clicked button
-      const activeButtonElement = document.getElementById(activeButton);
-      if (!activeButtonElement) {
-        console.error(`Button with id "${activeButton}" not found.`);
-        return; // Exit the function if the button is not found
-      }
-      activeButtonElement.classList.add('activeTab');
-
+      
+        const activeButtonElement = document.getElementById(activeButton);
+        // if (!activeButtonElement) {
+        //   console.error(`Button with id "${activeButton}" not found.`);
+        //   return; // Exit the function if the button is not found
+        // }
+      if (activeButtonElement) {
+        activeButtonElement.classList.add('activeTab');
+      };
       // Hide all columns
       document.querySelectorAll('th, td').forEach(cell => {
         if (cell.classList.contains('btn-1') || cell.classList.contains('btn-2') || cell.classList.contains('btn-3')) {
@@ -128,19 +127,20 @@ document.addEventListener("DOMContentLoaded", () => {
       popup.style.display = "none";
   };
 
-  toggleButton.addEventListener("click", (event) => {
+  if (toggleButton) {
+    toggleButton.addEventListener("click", (event) => {
       event.stopPropagation();
       togglePopup();
-  });
+    });
 
-  closeButton.addEventListener("click", closePopup);
+    closeButton.addEventListener("click", closePopup);
 
-  document.addEventListener("click", (event) => {
+    document.addEventListener("click", (event) => {
       if (!popup.contains(event.target) && event.target !== toggleButton) {
-          closePopup();
+        closePopup();
       }
-  });
-
+    });
+  };
   filterButtons.forEach(button => {
       button.addEventListener("click", () => {
           filterButtons.forEach(btn => btn.classList.remove("activeFilter"));
@@ -148,40 +148,42 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 
-  addFilterButton.addEventListener("click", () => {
+  if (addFilterButton) {
+    addFilterButton.addEventListener("click", () => {
       const activeFilterButton = document.querySelector(".filter-button.activeFilter");
       const activeDropdownItem = document.querySelector(".dropdown-item.filter.activeFilter");
 
       if (activeDropdownItem) {
-          let closestFilterTitle = null;
-          let currentElement = activeDropdownItem.previousElementSibling;
+        let closestFilterTitle = null;
+        let currentElement = activeDropdownItem.previousElementSibling;
 
-          while (currentElement) {
-              if (currentElement.classList.contains("filter-title")) {
-                  closestFilterTitle = currentElement.textContent.trim();
-                  break;
-              }
-              currentElement = currentElement.previousElementSibling;
+        while (currentElement) {
+          if (currentElement.classList.contains("filter-title")) {
+            closestFilterTitle = currentElement.textContent.trim();
+            break;
           }
+          currentElement = currentElement.previousElementSibling;
+        }
 
-          const filterText = activeDropdownItem.textContent.trim();
-          const filterLabel = activeFilterButton.textContent.trim();
+        const filterText = activeDropdownItem.textContent.trim();
+        const filterLabel = activeFilterButton.textContent.trim();
 
-          const badge = document.createElement("div");
-          badge.className = "badge";
-          badge.innerHTML = `
+        const badge = document.createElement("div");
+        badge.className = "badge";
+        badge.innerHTML = `
               ${filterLabel} effect op ${closestFilterTitle} ${filterText}
               <span class="badge-close">&times;</span>
           `;
-          filterContainer.appendChild(badge);
+        filterContainer.appendChild(badge);
 
-          closePopup();
+        closePopup();
 
-          badge.querySelector(".badge-close").addEventListener("click", () => {
-              badge.remove();
-          });
+        badge.querySelector(".badge-close").addEventListener("click", () => {
+          badge.remove();
+        });
       }
-  });
+    });
+  };
 
   dropdownItems.forEach(item => {
       item.addEventListener("click", (event) => {
@@ -200,29 +202,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const toggleText = document.getElementById("collapsible-text");
   const toggleButton = document.getElementById("toggle-button");
 
-  toggleButton.addEventListener("click", function (e) {
-    e.preventDefault();
+  if (toggleButton) {
+    toggleButton.addEventListener("click", function (e) {
+      e.preventDefault();
 
-    // Toggle expanded state
-    const isExpanded = toggleText.classList.toggle("expanded");
-    toggleButton.classList.toggle("expanded");
+      // Toggle expanded state
+      const isExpanded = toggleText.classList.toggle("expanded");
+      toggleButton.classList.toggle("expanded");
 
-    // Update button text and arrow direction
-    if (isExpanded) {
-      toggleButton.innerHTML = 'Minder tonen';
-    } else {
-      toggleButton.innerHTML = 'Meer tonen';
-    }
-  });
+      // Update button text and arrow direction
+      if (isExpanded) {
+        toggleButton.innerHTML = 'Minder tonen';
+      } else {
+        toggleButton.innerHTML = 'Meer tonen';
+      }
+    });
+  };
 });
 /* script to toggle content in the header ends here  */
-
-
-
-
-
-
-
 
 /* script for the table filtering dropdown BBT starts here */
 document.addEventListener("DOMContentLoaded", () => {
@@ -247,46 +244,50 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   // Show/hide popup on button click
-  toggleButton.addEventListener("click", (event) => {
-      event.stopPropagation();
-      togglePopup();
-  });
+  if (toggleButton) {
+    toggleButton.addEventListener("click", (event) => {
+        event.stopPropagation();
+        togglePopup();
+    });
+  };
 
   // Close popup on close button click
-  closeButton.addEventListener("click", closePopup);
+  if (closeButton) { closeButton.addEventListener("click", closePopup); };
 
   // Close popup if clicked outside
   document.addEventListener("click", (event) => {
-      if (!popup.contains(event.target) && event.target !== toggleButton) {
+      if (popup && !popup.contains(event.target) && event.target !== toggleButton) {
           closePopup();
       }
   });
 
   // Handle "Filter toevoegen" button click
-  addFilterButtonCheckbox.addEventListener("click", () => {
+  if (addFilterButtonCheckbox) {
+    addFilterButtonCheckbox.addEventListener("click", () => {
       checkboxes.forEach(checkbox => {
-          if (checkbox.checked) {
-              const label = checkbox.nextElementSibling.textContent.trim();
+        if (checkbox.checked) {
+          const label = checkbox.nextElementSibling.textContent.trim();
 
-              // Create badge with BBT text and label text
-              const badge = document.createElement("div");
-              badge.className = "badge";
-              badge.innerHTML = `
+          // Create badge with BBT text and label text
+          const badge = document.createElement("div");
+          badge.className = "badge";
+          badge.innerHTML = `
                   BBT: ${label}
                   <span class="badge-close">&times;</span>
               `;
-              filterContainer.appendChild(badge);
+          filterContainer.appendChild(badge);
 
-              // Add event listener to remove badge on "x" click
-              badge.querySelector(".badge-close").addEventListener("click", () => {
-                  badge.remove();
-              });
-          }
+          // Add event listener to remove badge on "x" click
+          badge.querySelector(".badge-close").addEventListener("click", () => {
+            badge.remove();
+          });
+        }
       });
 
       // Close popup
       closePopup();
-  });
+    });
+  };
 });
 /* script for the table filtering dropdown BBT ends here */
 
@@ -336,16 +337,19 @@ document.addEventListener("DOMContentLoaded", () => {
 /* filter badge count script starts here */
 
 /* script for playing video starts here */
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const videoOverlay = document.getElementById('videoOverlay');
   const youtubeVideo = document.getElementById('youtubeVideo');
-  
-  videoOverlay.addEventListener('click', function() {
+
+  if (videoOverlay) {
+    videoOverlay.addEventListener('click', function () {
       youtubeVideo.src += "&autoplay=1";  // Add autoplay when clicked
       youtubeVideo.classList.remove('hidden');
       videoOverlay.remove();
-  });
+    });
+  }
 });
+
 /* script for playing video ends here */
 
 
@@ -354,37 +358,59 @@ document.addEventListener("DOMContentLoaded", () => {
   const filterBlocks = document.querySelectorAll(".filter-block");
   const filterContainer = document.querySelector(".filter-container");
 
-  // Checkbox functionality
-  document.querySelectorAll(".form-check-input").forEach(checkbox => {
-    checkbox.addEventListener("change", () => {
-      const label = checkbox.nextElementSibling;
-      const blockTitle = checkbox.closest(".filter-block").querySelector(".filter-block-title").textContent.trim();
+  // Check if filter container exists
+  if (filterContainer) {
+    // Checkbox functionality
+    document.querySelectorAll(".form-check-input").forEach(checkbox => {
+      checkbox.addEventListener("change", () => {
+        const label = checkbox.nextElementSibling;
+        const filterBlock = checkbox.closest(".filter-block");
 
-      if (checkbox.checked) {
-        // Create badge
-        const badge = document.createElement("div");
-        badge.className = "badge";
-        badge.innerHTML = `
-          ${blockTitle}: ${label.innerHTML.trim()}
-          <span class="badge-close">&times;</span>
-        `;
-        filterContainer.appendChild(badge);
+        // Ensure the checkbox is inside a valid filter block
+        if (!filterBlock) {
+          console.error("Error: Checkbox is not inside a .filter-block.");
+          return;
+        }
 
-        // Add event listener for badge close
-        badge.querySelector(".badge-close").addEventListener("click", () => {
-          badge.remove();
-          checkbox.checked = false; // Uncheck the checkbox
-        });
-      } else {
-        // Remove badge when checkbox is unchecked
-        const existingBadge = Array.from(filterContainer.children).find(badge =>
-          badge.textContent.includes(label.textContent.trim())
-        );
-        if (existingBadge) existingBadge.remove();
-      }
+        const blockTitleElement = filterBlock.querySelector(".filter-block-title");
+
+        // Ensure the filter block has a valid title
+        if (!blockTitleElement) {
+          console.error("Error: No .filter-block-title found in .filter-block.");
+          return;
+        }
+
+        const blockTitle = blockTitleElement.textContent.trim();
+
+        if (checkbox.checked) {
+          // Create badge
+          const badge = document.createElement("div");
+          badge.className = "badge";
+          badge.innerHTML = `
+            ${blockTitle}: ${label.innerHTML.trim()}
+            <span class="badge-close">&times;</span>
+          `;
+          filterContainer.appendChild(badge);
+
+          // Add event listener for badge close
+          badge.querySelector(".badge-close").addEventListener("click", () => {
+            badge.remove();
+            checkbox.checked = false; // Uncheck the checkbox
+          });
+        } else {
+          // Remove badge when checkbox is unchecked
+          const existingBadge = Array.from(filterContainer.children).find(badge =>
+            badge.textContent.includes(label.textContent.trim())
+          );
+          if (existingBadge) existingBadge.remove();
+        }
+      });
     });
-  });
+  } else {
+    console.warn("Warning: .filter-container does not exist on the page.");
+  }
 });
+
 /* script for the data table checkbox filtering ends here */
 
 
@@ -437,7 +463,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  if (searchDropdown  ) {
+  if (searchDropdown) {
 
   searchDropdown.addEventListener("click", (event) => {
     if (event.target.tagName === "DIV") {
@@ -492,57 +518,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Close dropdown when clicking outside
   document.addEventListener("click", (event) => {
-    if (!searchInput.contains(event.target) && !searchDropdown.contains(event.target)) {
+    if (searchInput && !searchInput.contains(event.target) && !searchDropdown.contains(event.target)) {
       searchDropdown.classList.remove("active");
       searchBlock.classList.remove("active");
     }
   });
 });
-
-// /* script for opening and closing the canvas starts here */
-// document.addEventListener("DOMContentLoaded", () => {
-//   const toggleButton = document.querySelector('button[data-bs-toggle="offcanvas"]');
-//   const targetDiv = document.querySelector(".offcanvas.offcanvas-start.filter-block-canvas");
-//   const closeButton = document.querySelector(".btn-close.text-reset-canvas");
-
-//   // Check if elements exist before adding functionality
-//   if (toggleButton && targetDiv) {
-//     toggleButton.addEventListener("click", () => {
-//       if (targetDiv.classList.contains("show")) {
-//         // If the div has the class "show", toggle "hide" with a delay
-//         targetDiv.classList.remove("show");
-//         targetDiv.classList.add("hide");
-
-//         // Remove "hide" after 0.5 seconds
-//         setTimeout(() => {
-//           targetDiv.classList.remove("hide");
-//         }, 500);
-//       } else {
-//         // If the div doesn't have "show", add it
-//         targetDiv.classList.add("show");
-//       }
-//     });
-//   }
-
-//   // Check if the close button exists before adding functionality
-//   if (closeButton && targetDiv) {
-//     closeButton.addEventListener("click", () => {
-//       if (targetDiv.classList.contains("show")) {
-//         // Remove "show" and add "hide"
-//         targetDiv.classList.add("hide");
-        
-//         // / Remove "hide" after 0.2 seconds
-//         setTimeout(() => {
-//           targetDiv.classList.remove("show");
-//         }, 1500);
-
-//         // Remove "hide" after 0.5 seconds
-//         setTimeout(() => {
-//           targetDiv.classList.remove("hide");
-//         }, 1500);
-//       }
-//     });
-//   }
-// });
-
-// /* script for opening and closing the canvas ends here */

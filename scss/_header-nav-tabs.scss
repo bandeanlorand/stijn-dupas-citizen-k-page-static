@@ -1,0 +1,27 @@
+/* header navigation tabs - styles starts here */
+.nav-tabs {
+  background: #F0EFEF;
+  padding: 8px 40px;
+  border-bottom: 0;
+
+  .nav-link {
+    border-radius: 8px;
+    background: #F0EFEF;
+    border: 0;
+    color: $primary;
+    font-family: "Work Sans", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 10px 20px;
+    margin-bottom: 0;
+
+    &.active {
+      background: $primary-green;
+      color: #fff;
+    }
+  }
+}
+
+/* header navigation tabs  - styles ends here */
