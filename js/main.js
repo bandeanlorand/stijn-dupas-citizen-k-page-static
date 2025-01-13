@@ -109,8 +109,8 @@ document.addEventListener("DOMContentLoaded", () => {
 /* script for the table filtering dropdown Aspect starts here */
 
 document.addEventListener("DOMContentLoaded", () => {
-  const toggleButton = document.getElementById("togglePopupButton");
-  const popup = document.getElementById("customPopup");
+  const toggleButton = document.getElementById("aspectPopupButton");
+  const popup = document.getElementById("aspectPopup");
   const closeButton = document.getElementById("closePopupButton");
   const filterButtons = document.querySelectorAll(".filter-button");
   const dropdownItems = document.querySelectorAll(".dropdown-item.filter");
@@ -121,6 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
       popup.style.display = popup.style.display === "block" ? "none" : "block";
       filterButtons.forEach(btn => btn.classList.remove("activeFilter"));
       filterButtons[0].classList.add("activeFilter");
+      document.getElementById("bbtPopupCheckbox").style.display = "none";
   };
 
   const closePopup = () => {
@@ -192,7 +193,31 @@ document.addEventListener("DOMContentLoaded", () => {
           item.classList.add("activeFilter");
       });
   });
+
+  // Select the filter-buttons div
+  const filterButtonsDiv = document.querySelector(".filter-buttons");
+
+  // Check if the div exists
+  if (filterButtonsDiv) {
+    // Add event listener to each button
+    const buttons = filterButtonsDiv.querySelectorAll(".filter-button");
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        // Remove existing special classes
+        filterButtonsDiv.classList.remove("second-btn-active", "third-btn-active");
+
+        // Check which button is clicked and add the appropriate class
+        if (button.dataset.filter === "neutraal") {
+          filterButtonsDiv.classList.add("second-btn-active");
+        } else if (button.dataset.filter === "negatief") {
+          filterButtonsDiv.classList.add("third-btn-active");
+        }
+        // Note: No action needed for the first button ("positief")
+      });
+    });
+  }
 });
+
 
 /* script for the table filtering dropdown Aspect ends here */
 
@@ -223,8 +248,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* script for the table filtering dropdown BBT starts here */
 document.addEventListener("DOMContentLoaded", () => {
-  const toggleButton = document.getElementById("toggleSecondPopupButton");
-  const popup = document.getElementById("customPopupCheckbox");
+  const toggleButton = document.getElementById("bbtPopupButton");
+  const popup = document.getElementById("bbtPopupCheckbox");
   const closeButton = document.getElementById("closePopupCBButton");
   const addFilterButtonCheckbox = document.getElementById("addFilterButtonCheckbox");
   const filterContainer = document.querySelector(".filter-nr-container");
@@ -233,7 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to toggle the popup
   const togglePopup = () => {
       popup.style.display = popup.style.display === "block" ? "none" : "block";
-
+      document.getElementById("aspectPopup").style.display = "none";
       // Uncheck all checkboxes when the popup opens
       checkboxes.forEach(checkbox => checkbox.checked = false);
   };

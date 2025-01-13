@@ -257,9 +257,9 @@
             <!-- dropdown-popup for aspect filtering starts here -->
             <div class="aspect table-header-filter-buton">
               <!-- Trigger button for the dropdown popup-->
-              <button id="togglePopupButton" class="btn btn-primary">Aspect</button>
+              <button id="aspectPopupButton" class="btn btn-primary">Aspect</button>
               <!-- the popup itself starts here-->
-              <div id="customPopup" class="custom-popup">
+              <div id="aspectPopup" class="custom-popup aspect">
                 <div class="custom-popup-header">
                   <h6 class="m-0">Aspect</h6>
                   <button type="button" class="btn-close" id="closePopupButton"></button>
@@ -312,42 +312,44 @@
             <!-- dropdown popup BBT filtering starts here -->
             <div class="bbt table-header-filter-buton">
 
-              <button id="toggleSecondPopupButton" class="btn btn-primary">Open Popup</button>
+              <button id="bbtPopupButton" class="btn btn-primary">BBT</button>
 
               <!-- Custom popup -->
-              <div id="customPopupCheckbox" class="custom-popup">
+              <div id="bbtPopupCheckbox" class="custom-popup">
                 <div class="custom-popup-header">
                   <h6 class="m-0">BBT</h6>
                   <button type="button" class="btn-close" id="closePopupCBButton"></button>
                 </div>
                 <div class="custom-popup-body">
                   <!-- Checkbox List -->
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="popupChecboxFilter1">
-                    <label class="form-check-label" for="popupChecboxFilter1">
-                      Ja
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="popupChecboxFilter2">
-                    <label class="form-check-label" for="popupChecboxFilter2">
-                      Nee
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="popupChecboxFilter3">
-                    <label class="form-check-label" for="popupChecboxFilter3">
-                      To
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="popupChecboxFilter4">
-                    <label class="form-check-label" for="popupChecboxFilter4">
-                      VgTg
-                    </label>
-                  </div>
-                  <!-- Filter button -->
-                  <button class="apply-filter" id="addFilterButtonCheckbox">Filter toevoegen</button>
+                  <form>
+                    <div class="form-check">
+                      <input class="form-check-input popup-checkbox" type="checkbox" value="" id="popupChecboxFilter1">
+                      <label class="form-check-label" for="popupChecboxFilter1">
+                        Ja
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input popup-checkbox" type="checkbox" value="" id="popupChecboxFilter2">
+                      <label class="form-check-label" for="popupChecboxFilter2">
+                        Nee
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input popup-checkbox" type="checkbox" value="" id="popupChecboxFilter3">
+                      <label class="form-check-label" for="popupChecboxFilter3">
+                        To
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input popup-checkbox" type="checkbox" value="" id="popupChecboxFilter4">
+                      <label class="form-check-label" for="popupChecboxFilter4">
+                        VgTg
+                      </label>
+                    </div>
+                    <!-- Filter button -->
+                    <button class="apply-filter" id="addFilterButtonCheckbox">Filter toevoegen</button>
+                  </form>
                 </div>
               </div>
 

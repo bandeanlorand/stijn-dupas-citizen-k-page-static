@@ -39,7 +39,64 @@
     color: $primary;
   }
 }
+/* styles for filtered number starts here */
+.filter-nr {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  text-decoration: underline;
+  color: $primary-green;
+}
 
+/* styles for filtered number ends here */
+
+/* table header filter buttons styles starts here */
+.table-header-filter-buton {
+  position: relative;
+
+  button.btn {
+    padding: 9px 34px 9px 12px;
+    margin-right: 8px;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #0A6076;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    border: 0;
+    margin-right: 8px;
+
+    &:last-child {
+      margin-left: 0;
+    }
+
+    &::after {
+      content: '';
+      background-image: url('data:image/svg+xml,<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.30936 9.49686C7.1385 9.66771 6.8615 9.66771 6.69064 9.49686L2.31564 5.12186C2.14479 4.95101 2.14479 4.674 2.31564 4.50314C2.4865 4.33229 2.7635 4.33229 2.93436 4.50314L7 8.56878L11.0656 4.50314C11.2365 4.33229 11.5135 4.33229 11.6844 4.50314C11.8552 4.674 11.8552 4.95101 11.6844 5.12186L7.30936 9.49686Z" fill="white"/></svg>');
+      width: 14px;
+      height: 14px;
+      position: absolute;
+      right: 18px;
+      top: 9px;
+    }
+
+    &:active{
+      background: #0A6076;
+    }
+  }
+}
+
+/* table header filter buttons styles starts here */
 .filter-type {
   font-family: 'Work Sans';
   font-style: normal;
@@ -193,14 +250,16 @@ top:-1px
   position: absolute;
   display: none;
   top: 100%;
-  left: 0;
+  left: -8px;
   z-index: 1050;
   background-color: white;
-  border: 1px solid #ccc;
   border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
   padding: 20px;
   min-width: 300px;
+  border-radius: 8px;
+
+  &.aspect{min-width: 400px;}
 
   .custom-popup-header {
     display: flex;
@@ -326,10 +385,31 @@ top:-1px
     align-items: center;
     align-content: center;
     border-radius: 30.4px;
-    padding: 4px 0;
+    padding: 4px 4px;
     background: #F0EFEF;
     justify-content: space-between;
     margin-bottom: 8px;
+    position: relative;
+
+    &:before{
+      content:'';
+      display: block;
+      position: absolute;
+      width:33.3%;
+      background: $secondary-green;
+      border-radius: 30.4px;
+      height: 32px;
+      z-index: 0;
+      left:4px;
+      transition: all 0.1s ease;
+    }
+
+    &.second-btn-active::before{
+      left:33.3%
+    }
+    &.third-btn-active::before{
+      left:66.6%
+    }
 
     .filter-button {
       border: 0;
@@ -341,16 +421,22 @@ top:-1px
       text-align: center;
       color: $primary;
       border-radius: 30.4px;
-      padding: 6px 16px;
+      padding: 6px 6px;
       margin: 0px 4px;
       background-color: transparent;
+      display: inline-flex;
+      width: 33%;
+      justify-content: center;
+      z-index: 1;
 
+
+      
       &.activeFilter {
-        background: $secondary-green;
+        // background: $secondary-green;
       }
 
       &:hover {
-        background: $secondary-green;
+        // background: $secondary-green;
       }
     }
   }
