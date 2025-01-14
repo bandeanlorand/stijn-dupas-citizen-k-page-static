@@ -152,6 +152,7 @@ img {
     line-height: 39px;
     color: $primary;
     padding-bottom: 16px;
+    margin: 0;
   }
 
   p {
@@ -167,7 +168,9 @@ img {
       font-weight: 500;
     }
   }
-
+  article.header-block{
+    margin-bottom: 40px;
+  }
   aside {
     h3 {
       font-family: "Yantramanav", serif;
@@ -208,9 +211,13 @@ img {
 
 /* Left Column Styles */
 .link-menu {
-  padding: 12px 0px 20px 0px;
+  padding: 5px 0px 20px 0px;
   overflow-y: auto;
-  margin-left: -8px;
+  margin-left: 0px;
+
+  @include media-breakpoint-up(xl){
+    max-width: 350px;
+  }
 
   h4 {
     font-family: 'Yantramanav';
@@ -242,6 +249,9 @@ img {
     margin: 10px 0;
     position: relative;
 
+    &.mt-0{
+      margin-bottom: 14px;
+    }
 
     >a {
       font-family: 'Work Sans';
@@ -254,7 +264,7 @@ img {
       display: flex;
       align-items: flex-start;
       cursor: pointer;
-      padding: 6px 6px 6px 6px;
+      padding: 6px 0px 6px 6px;
 
 
       &::before {
@@ -263,11 +273,11 @@ img {
         mask-repeat: no-repeat;
         background-color: $primary;
         mask-position: center;
-        mask-size: 40%;
+        mask-size: 38%;
         width: 20px;
         height: 20px;
         margin-right: 10px;
-        margin-left: 6px;
+        margin-left: 2px;
         margin-top: 5px;
         display: block;
         transition: transform 0.2s ease;
@@ -331,6 +341,12 @@ img {
 
 // Right Column Styles
 /* Content styles */
+
+.col-12.col-xl-4.custom-col{
+  @include media-breakpoint-up(xl){
+    max-width: 410px;
+  }
+}
 .content-nested-dropdown {
   flex-grow: 1;
   padding: 20px;
@@ -346,10 +362,13 @@ img {
       opacity: 1;
     }
   }
-}
 
+  &.pt-0{
+    @include media-breakpoint-up(xl){
+      
+    }
+  }
 
-.content-nested-dropdown {
   h2 {
 
     font-family: 'Yantramanav';
@@ -395,9 +414,7 @@ img {
 
 /* acordeon styles ends here */
 /* toggle text styles starts here */
-article.mb-4 {
-  margin-bottom: 40px;
-}
+
 
 .toggle-text {
   overflow: hidden;
@@ -444,6 +461,7 @@ article.mb-4 {
 /* toggle text styles ends here */
 /* table styles starts here */
 nav.techniques-table {
+  padding-bottom: 32px;
   button {
     display: flex;
     flex-direction: row;

@@ -929,7 +929,12 @@ table.techniques-table {
     width: 128px;
 
     &.w-2 {
-      width: 64px;
+      max-width: 64px;
+
+
+      > div{
+        max-width: 64px;
+      }
     }
   }
 
