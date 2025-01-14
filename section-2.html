@@ -65,6 +65,8 @@
             aria-labelledby="offcanvasExampleLabel">
             <button type="button" class="btn-close btn-reset-canvas" data-bs-dismiss="offcanvas"
               aria-label="Close"></button>
+
+            <h2 class="filter-type">Filter op</h2>  
             <div class="filter-block">
               <h3 class="filter-block-title">Sectoren</h3>
               <div class="filter-block-list">
@@ -223,9 +225,8 @@
           <div class="table-filtering">
             <button type="button" class="btn btn-filters-mobile" data-bs-toggle="offcanvas"
               data-bs-target="#showFiltersMobile">Filters weergeven</button>
-            <div class="filter-type">Filter op:</div>
-
-            <div class="filter-nr"></div>
+            <!-- the div below with the class name of "filter-nr" has to be added to the html as it is. The js will place the searched badges into this div -->
+              <div class="filter-nr"></div>
             <!-- dropdown popup BBT filtering ends here -->
             <div class="pagination-info">Overzicht: <b>103 van 120</b> publicaties </div>
 
