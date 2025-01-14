@@ -505,6 +505,7 @@
 .technique-type-cell {
   min-width: 192px;
   text-align: left;
+  padding-left: 8px;
 }
 
 .technique-type-icon {
@@ -574,6 +575,10 @@
   text-align: left;
   padding: 12px 8px;
   height: 64px;
+
+  &:first-child{
+    padding-right: 0;
+  }
 }
 
 .flag-icon {
