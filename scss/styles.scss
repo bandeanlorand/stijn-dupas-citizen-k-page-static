@@ -468,6 +468,10 @@ nav.techniques-table {
       background: $primary-green;
     }
   }
+
+  + .table-filtering{
+    margin-left: 0;
+  }
 }
 
 .icon-cell {
@@ -531,3 +535,10 @@ iframe {
 @import '_table';
 @import '_links-buttons';
 
+@include media-breakpoint-up(xl) {
+  .right-content{
+    max-width: 480px;
+    width: 100%;
+    float: right;
+  }
+}
