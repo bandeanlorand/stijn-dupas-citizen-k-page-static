@@ -31,6 +31,7 @@ nav ol.breadcrumb {
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 50%;
+    transition: all ease 0.2s;
 
     @include media-breakpoint-up(xl) {
       max-width: 30%;
@@ -54,13 +55,33 @@ nav ol.breadcrumb {
       text-decoration: none;
     }
 
+    &:hover{
+      a{
+        color:$primary-green;
+      }
+      
+      &::after {
+        background-color: $primary-green;
+      }
+    }
+
     +.breadcrumb-item {
       padding-left: var(--bs-breadcrumb-item-padding-x);
       cursor: default;
+      
 
       &::after {
         width: calc(100% - 26px);
       }
+      /* disable hover on last element starts*/
+      &:last-child{
+        &:hover{
+          &::after {
+            background-color: $primary;
+          }
+        }
+      }
+      /* disable hover on last element ends */
 
       &:before {
         width: 20px;

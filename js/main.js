@@ -366,11 +366,17 @@ document.addEventListener('DOMContentLoaded', function () {
   const videoOverlay = document.getElementById('videoOverlay');
   const youtubeVideo = document.getElementById('youtubeVideo');
 
-  if (videoOverlay) {
+  if (videoOverlay && youtubeVideo) {
     videoOverlay.addEventListener('click', function () {
-      youtubeVideo.src += "&autoplay=1";  // Add autoplay when clicked
-      youtubeVideo.classList.remove('hidden');
+      // Remove the overlay
       videoOverlay.remove();
+
+      // Set the src attribute with autoplay enabled
+      const videoUrl = youtubeVideo.src.replace("autoplay=0", "autoplay=1");
+      youtubeVideo.src = videoUrl;
+
+      // Make the iframe visible
+      youtubeVideo.classList.remove('hidden');
     });
   }
 });

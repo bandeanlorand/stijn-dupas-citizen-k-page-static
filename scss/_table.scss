@@ -1,3 +1,45 @@
+
+/* table styles starts here */
+nav.techniques-table {
+  padding-bottom: 32px;
+  button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 17px 16px;
+
+    box-shadow: none;
+    border-radius: 1000px;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+    color: $primary;
+    border: none;
+    margin: 0 16px 0 0;
+
+    &.activeTab,
+    &:hover {
+      color: #fff;
+      background: $primary-green;
+    }
+  }
+
+  + .table-filtering{
+    margin-left: 0;
+  }
+}
+
+.icon-cell {
+  text-align: center;
+}
+
+.icon {
+  font-size: 18px;
+  color: #007bff;
+}
 .techniques-table-wrapper {
   overflow-y: auto;
   border: 2px solid #f0eeef;
@@ -436,16 +478,6 @@
       width: 33%;
       justify-content: center;
       z-index: 1;
-
-
-      
-      &.activeFilter {
-        // background: $secondary-green;
-      }
-
-      &:hover {
-        // background: $secondary-green;
-      }
     }
   }
 }

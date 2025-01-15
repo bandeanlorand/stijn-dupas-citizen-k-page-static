@@ -16,8 +16,8 @@
 
   sup{
     right: -4px;
-  position: absolute;
-  top: 4px;
+    position: absolute;
+    top: 4px;
   }
 
   &.ra-0 {
@@ -71,13 +71,18 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  /* identical to box height, or 143% */
   align-items: center;
   color: #7A7A7A;
   border-radius: 50%;
   background-image: url('../images/rating-score.svg');
   background-repeat: no-repeat;
-  // background-position: 0px -8px;
+  position: relative;
+
+  sup{
+    right: -2px;
+    position: absolute;
+    top: 0px;
+  }
 
   &.rs-0 {
     background-position: -20px -8px;
