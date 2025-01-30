@@ -457,6 +457,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Ensure content is open by default
     list.style.maxHeight = `${list.scrollHeight}px`;
 
+    if (title ) {
     title.addEventListener("click", () => {
       if (list.classList.contains("closed")) {
         list.classList.remove("closed");
@@ -468,6 +469,7 @@ document.addEventListener("DOMContentLoaded", () => {
         title.classList.add("closed");
       }
     });
+  }
   });
 
   // Search functionality
@@ -555,3 +557,41 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+/* script for one level menu starts here */
+document.addEventListener("DOMContentLoaded", function () {
+  const menuLinks = document.querySelectorAll(".link-menu-one-level a");
+  const contentSections = document.querySelectorAll(".content-dropdown > div");
+
+  function activateMenuItem(menuLink) {
+      // Remove 'active' class from all menu items
+      menuLinks.forEach(link => link.classList.remove("active"));
+
+      // Add 'active' class to the clicked menu item
+      menuLink.classList.add("active");
+
+      // Hide all content sections
+      contentSections.forEach(content => content.classList.remove("active"));
+
+      // Show the target content
+      const targetId = menuLink.getAttribute("data-target");
+      if (targetId) {
+          document.getElementById(targetId).classList.add("active");
+      }
+  }
+
+  // Ensure the first menu item is selected on page load
+  if (menuLinks.length > 0) {
+      activateMenuItem(menuLinks[0]);
+  }
+
+  // Add click event to each menu item
+  menuLinks.forEach(menuLink => {
+      menuLink.addEventListener("click", function (e) {
+          e.preventDefault();
+          activateMenuItem(this);
+      });
+  });
+});
+/* script for one level menu ends here */

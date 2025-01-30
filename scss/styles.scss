@@ -23,7 +23,11 @@
 // Option 2
 //
 // Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
-
+body,html{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 // Toggle global options
 $enable-gradients: true;
 $enable-shadows: true;
@@ -125,8 +129,14 @@ img {
 /* Custom media query for devices larger than 1440px */
 .container {
   max-width: 100%;
+  height: 100%;
 }
-
+main.container {
+  flex: 1;
+  display: flex;
+  justify-content:flex-start;
+  flex-direction: column;
+}
 @media (min-width: 1440px) {
 
   .container {
@@ -139,13 +149,6 @@ img {
 @import "_breadcrumb";
 @import "_header";
 @import "_header-nav-tabs";
-
-
-
-
-
-
-
 @import "_table-ratings-icons";
 
 /* table styles starts here */
@@ -155,11 +158,10 @@ img {
 /* styles for video container ends here*/
 @import '_table';
 @import '_links-buttons';
+@import "_newsletter";
+@import "_link-block";
+@import "_timeline";
+@import "_content-card";
+@import "_content-card-figure";
+@import "_content-toggle-list";
 
-@include media-breakpoint-up(xl) {
-  .right-content{
-    max-width: 480px;
-    width: 100%;
-    float: right;
-  }
-}
