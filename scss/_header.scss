@@ -1,8 +1,30 @@
 /* header - styles starts here */
 header {
   background: $header-bg-green;
+  background: #cdefe1;
   padding: 16px 40px 16px 40px;
+  position: relative;
+  @include media-breakpoint-up(xl){
+    padding-right: 376px;
+  }
 
+  &.full-width{
+    @include media-breakpoint-up(md) {
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100vw; 
+        background: #cdefe1; 
+        z-index: -1; 
+        height: 100%;
+        margin-left: calc(-50vw + 48%);
+        box-shadow: 24px 0px 0px #cdefe1;
+      }
+    }
+  }
+  
   h1.h3 {
     color: $header-title-color;
     font-family: "Yantramanav", serif;
@@ -41,6 +63,12 @@ header {
       color: $header-title-color;
       font-weight: 500;
     }
+  }
+
+  &.no-breadcrumb{
+    padding:48px 40px 48px 40px;
+
+    
   }
 }
 

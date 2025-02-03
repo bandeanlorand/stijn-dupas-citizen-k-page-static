@@ -882,6 +882,21 @@ a.table-list-element {
       padding: 0 0 16px 20px;
       width: calc(100% + 20px);
       left: -20px;
+
+      &.filter-top{
+        position: absolute;
+        top: -104px;
+        z-index: 10;
+        padding-top: 22px;
+        left: -22px;
+
+  
+  
+        + .filter-block{
+          margin-top: 60px;
+        }
+      }
+      
     }
 
     .filter-block-list {
@@ -1063,7 +1078,7 @@ table tbody tr:not(.title-row):not(.title-row.light) {
 
 table.techniques-table {
   background: #fbf9fa;
-  min-width: 800px;
+  min-width: 768px;
 
   .thead {
     background: #fbf9fa;
@@ -1180,7 +1195,7 @@ table.techniques-table {
 
   table.simple-table {
     background: #fff;
-    min-width: 800px;
+    min-width: 768px;
 
     thead {
       background: #fbf9fa;

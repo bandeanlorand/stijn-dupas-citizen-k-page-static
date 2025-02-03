@@ -3,6 +3,7 @@
   background: #F0EFEF;
   padding: 8px 40px;
   border-bottom: 0;
+  position: relative;
 
   .nav-link {
     border-radius: 8px;
@@ -28,6 +29,24 @@
 
     &:hover{
       color: $primary-green;
+    }
+  }
+}
+
+header.full-width + .nav-tabs{
+  @include media-breakpoint-up(md) {
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      width: 100vw; 
+      background: #F0EFEF; 
+      z-index: -1; 
+      height: 100%;
+      margin-left: calc(-50vw + 48%);
+      box-shadow: 24px 0px 0px #F0EFEF;
     }
   }
 }

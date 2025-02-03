@@ -175,8 +175,10 @@ document.addEventListener("DOMContentLoaded", () => {
               ${filterLabel} effect op ${closestFilterTitle} ${filterText}
               <span class="badge-close">&times;</span>
           `;
-        filterContainer.appendChild(badge);
 
+          if (filterContainer) {
+            filterContainer.appendChild(badge);
+          }
         closePopup();
 
         badge.querySelector(".badge-close").addEventListener("click", () => {
@@ -323,42 +325,45 @@ document.addEventListener("DOMContentLoaded", () => {
     const filterContainer = document.querySelector('.filter-nr-container');
     const filterNr = document.querySelector('.filter-nr');
 
-    // Ensure filterContainer exists
     if (!filterContainer) {
-      console.error('Error: .filter-nr-container element not found.');
+      // console.warn('Warning: .filter-nr-container not found.');
       return;
     }
 
     const badgeCount = filterContainer.querySelectorAll('.badge').length;
 
     if (filterNr) {
-      if (badgeCount > 0) {
-        filterNr.innerHTML = `Filter (<span>${badgeCount}</span>) leegmaken`;
-      } else {
-        filterNr.innerHTML = '';
-      }
+      filterNr.innerHTML = badgeCount > 0 
+        ? `Filter (<span>${badgeCount}</span>) leegmaken` 
+        : '';
     }
   }
 
-  // Initial count update
-  updateBadgeCount();
-
-  // Get the filterContainer and ensure it exists before observing
-  const filterContainer = document.querySelector('.filter-nr-container');
-  if (!filterContainer) {
-    console.error('Error: .filter-nr-container element not found. MutationObserver not started.');
-    return;
+  // Function to wait for the filterContainer to be available
+  function waitForElement(selector, callback) {
+    const element = document.querySelector(selector);
+    if (element) {
+      callback(element);
+    } else {
+      setTimeout(() => waitForElement(selector, callback), 100);
+    }
   }
 
-  // Set up a MutationObserver to listen for changes in the filter container
-  const observer = new MutationObserver(updateBadgeCount);
+  // Wait for .filter-nr-container before running the observer
+  waitForElement('.filter-nr-container', (filterContainer) => {
+    updateBadgeCount(); // Initial count update
 
-  // Start observing the target node for configured mutations
-  observer.observe(filterContainer, {
-    childList: true, // Monitor addition or removal of child elements
-    subtree: false   // Don't watch the entire subtree, just direct children
+    // Set up a MutationObserver to listen for changes in the filter container
+    const observer = new MutationObserver(updateBadgeCount);
+
+    // Start observing the target node for mutations
+    observer.observe(filterContainer, {
+      childList: true, // Monitor addition or removal of child elements
+      subtree: false   // Don't watch the entire subtree, just direct children
+    });
   });
 });
+
 /* filter badge count script starts here */
 
 /* script for playing video starts here */
@@ -438,7 +443,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   } else {
-    console.warn("Warning: .filter-container does not exist on the page.");
+    // console.warn("Warning: .filter-container does not exist on the page.");
   }
 });
 
