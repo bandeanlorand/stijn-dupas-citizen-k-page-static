@@ -86,7 +86,8 @@
     transition: all ease 0.2s;
 
     &:hover {
-      // color: $primary-green;
+      color: $primary-green-hover;
+      background: #5DE5A5;
     }
   }
 

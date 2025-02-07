@@ -4,8 +4,6 @@ ul.link-block {
   padding-left: 0;
 
   // --d-color-semantic-secondary-bg
-  
-
 
   li {
       list-style: none;
@@ -30,16 +28,17 @@ ul.link-block {
       padding: 14px 50px 14px 60px;
       position: relative;
       display: inline-block;
+      transition: 0.2s ease all;
 
 
 
       &:hover {
-          color: $primary-green;
-          background-color: rgba(93, 229, 165, .1);
+          color: $primary-green-hover;
+          background-color: #72E8B1;
 
           &::before,
           &::after {
-              background-color: $primary-green;
+              background-color:$primary-green-hover;
           }
       }
 

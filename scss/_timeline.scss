@@ -8,10 +8,6 @@
     background-size: auto 100%;
 
     h3 {
-        /* BBT van 1995 tot ... */
-
-
-        /* 🌀Tailwind/sans/text-2xl/medium */
         font-family: 'Yantramanav';
         font-style: normal;
         font-weight: 500;
@@ -20,24 +16,17 @@
         display: flex;
         align-items: center;
         color: #FFFFFF;
-
-
     }
 
     p {
-
         font-family: 'Work Sans', serif;
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 28px;
-        /* or 175% */
         display: flex;
         align-items: center;
-
         color: #FFFFFF;
-
-
     }
 
     button {
@@ -52,9 +41,9 @@
         line-height: 14px;
         color: #1C4039;
 
-        &:hover{
-            background: #5DE5A5;
-            color: #1C4039;
+        &:hover {
+            background: #9DE7C4;
+            color: $primary-green-hover;
         }
     }
 }
