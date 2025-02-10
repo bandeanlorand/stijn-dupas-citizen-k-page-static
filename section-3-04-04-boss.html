@@ -53,8 +53,13 @@
 
     <section class="content pb-5">
       <div class="row equal-height-row card-row">
-        <div class="row">
-          <div class="col-12 col-xl-4 custom-col">
+
+        <div class="col-12 col-xl-4 custom-col">
+          <!-- menu container slide in what is used for desktop and mobile - start here -->
+          <div class="offcanvas offcanvas-start article-menu-canvas" tabindex="-1" id="showArticleListMenuMobile"
+            aria-labelledby="offcanvasMenuBlock">
+            <button type="button" class="btn-close btn-reset-canvas" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
             <div class="link-menu-one-level">
               <ul>
                 <li><a href="#" data-target="content-1">Applicatie</a></li>
@@ -65,58 +70,64 @@
               </ul>
             </div>
           </div>
-          <div class="col-12 col-xl-8">
-            <div class="content-dropdown pt-0">
-              <div id="content-1">
-                <h2>Start de applicatie</h2>
-                <p>Get away from those little Christmas tree things we used to make in school. We have a fantastic
-                  little sky! Everyone needs a friend. Friends are the most valuable things in the world. Isn't that
-                  fantastic? You can just push a little tree out of your brush like that. I want everbody to be happy.
-                  That's what it's all about. Little short strokes.</p>
+          <!-- menu container slide in what is used for desktop and mobile - ends here -->
+        </div>
+        <div class="col-12 col-xl-8">
+          <div class="content-dropdown pt-0">
+            <!-- Button that opens side menu with article list - button is not visible on desktop this - starts here -->
+            <button type="button" class="btn btn-show-article-menu-mobile" data-bs-toggle="offcanvas"
+              data-bs-target="#showArticleListMenuMobile">Applicatie</button>
+            <!-- Button that opens side menu with article list - button is not visible on desktop this - ends here -->
+            <div id="content-1">
+              <h2>Start de applicatie</h2>
+              <p>Get away from those little Christmas tree things we used to make in school. We have a fantastic
+                little sky! Everyone needs a friend. Friends are the most valuable things in the world. Isn't that
+                fantastic? You can just push a little tree out of your brush like that. I want everbody to be happy.
+                That's what it's all about. Little short strokes.</p>
 
-                <p>Let's have a little bit of fun today. And maybe a little bush lives there. I'm gonna add just a tiny
-                  little amount of Prussian Blue. Exercising the imagination, experimenting with talents, being
-                  creative; these things, to me, are truly the windows to your soul.</p>
-                  
-                <p>See how easy it is to create a little tree right in your world. Very easy to work these to death.
-                  Even the worst thing we can do here is good.</p>
+              <p>Let's have a little bit of fun today. And maybe a little bush lives there. I'm gonna add just a tiny
+                little amount of Prussian Blue. Exercising the imagination, experimenting with talents, being
+                creative; these things, to me, are truly the windows to your soul.</p>
 
-                <p>There are no limits in this world. We'll put some happy little leaves here and there. Take your time.
-                  Speed will come later.</p>
+              <p>See how easy it is to create a little tree right in your world. Very easy to work these to death.
+                Even the worst thing we can do here is good.</p>
 
-                <p>In painting, you have unlimited power. You have the ability to move mountains. We can fix anything.
-                  Just pretend you are a whisper floating across a mountain. There's not a thing in the world wrong with
-                  washing your brush.</p>
+              <p>There are no limits in this world. We'll put some happy little leaves here and there. Take your time.
+                Speed will come later.</p>
 
-                <p>If we're gonna walk though the woods, we need a little path. We tell people sometimes: we're like
-                  drug dealers, come into town and get everybody absolutely addicted to painting. It doesn't take much
-                  to get you addicted. Everybody's different. Trees are different. Let them all be individuals. You can
-                  do anything here. So don't worry about it. Volunteering your time; it pays you and your whole
-                  community fantastic dividends. And that's when it becomes fun - you don't have to spend your time
-                  thinking about what's happening - you just let it happen.</p>
+              <p>In painting, you have unlimited power. You have the ability to move mountains. We can fix anything.
+                Just pretend you are a whisper floating across a mountain. There's not a thing in the world wrong with
+                washing your brush.</p>
 
-                <p>We might as well make some Almighty mountains today as well, what the heck. It takes dark in order to
-                  show light. See there, told you that would be easy. Isn't that fantastic?</p>
-              </div>
-              <div id="content-2">
-                <h2>Beperkingen</h2>
-                <p>Details about Beperkingen.</p>
-              </div>
-              <div id="content-3">
-                <h2>Technieken</h2>
-                <p>Details about Technieken.</p>
-              </div>
-              <div id="content-4">
-                <h2>Outputparameters</h2>
-                <p>Details about Outputparameters.</p>
-              </div>
-              <div id="content-5">
-                <h2>Input & output</h2>
-                <p>Details about Outputparameters.</p>
-              </div>
+              <p>If we're gonna walk though the woods, we need a little path. We tell people sometimes: we're like
+                drug dealers, come into town and get everybody absolutely addicted to painting. It doesn't take much
+                to get you addicted. Everybody's different. Trees are different. Let them all be individuals. You can
+                do anything here. So don't worry about it. Volunteering your time; it pays you and your whole
+                community fantastic dividends. And that's when it becomes fun - you don't have to spend your time
+                thinking about what's happening - you just let it happen.</p>
+
+              <p>We might as well make some Almighty mountains today as well, what the heck. It takes dark in order to
+                show light. See there, told you that would be easy. Isn't that fantastic?</p>
+            </div>
+            <div id="content-2">
+              <h2>Beperkingen</h2>
+              <p>Details about Beperkingen.</p>
+            </div>
+            <div id="content-3">
+              <h2>Technieken</h2>
+              <p>Details about Technieken.</p>
+            </div>
+            <div id="content-4">
+              <h2>Outputparameters</h2>
+              <p>Details about Outputparameters.</p>
+            </div>
+            <div id="content-5">
+              <h2>Input & output</h2>
+              <p>Details about Outputparameters.</p>
             </div>
           </div>
         </div>
+
 
       </div>
     </section>

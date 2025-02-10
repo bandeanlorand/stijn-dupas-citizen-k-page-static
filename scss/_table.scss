@@ -52,10 +52,17 @@ nav.techniques-table {
   background-color: #F0EFEF;
   padding: 16px 16px 16px 16px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: center;
+  
+
+  @include media-breakpoint-up(xl){
+    margin-left: 12px;
+    flex-direction: row;
   align-items: center;
   align-content: center;
-  margin-left: 12px;
+  }
 
   .pagination-info {
     font-family: 'Work Sans';
@@ -65,7 +72,10 @@ nav.techniques-table {
     line-height: 28px;
     text-align: right;
     color: $primary;
-    margin-left: auto;
+    
+    @include media-breakpoint-up(xl){
+      margin-left: auto;
+    }
 
     b {
       font-weight: 600;
@@ -505,7 +515,11 @@ nav.techniques-table {
   background-color: #F0EFEF;
   transition: max-height 1.25s ease-in;
   max-height: 100vh;
-  margin-left: 12px;
+  display: none;
+  @include media-breakpoint-up(xl){
+    margin-left: 12px;
+    display: block;
+  }
 
   .badge {
     background-color: #fff;
@@ -809,6 +823,8 @@ a.table-list-element {
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
   color: #fff;
+  width: 100%;
+  max-width: 380px;
 
   &:hover {
     opacity: 0.9;
@@ -822,9 +838,10 @@ a.table-list-element {
 }
 
 .offcanvas.offcanvas-start.filter-block-canvas {
-  padding: 48px 35px 24px 36px;
+  padding: 48px 24px 24px 24px;
   overflow: auto;
   height: 100%;
+  --bs-offcanvas-width:428px !important;
 
   @include media-breakpoint-up(xl) {
     padding: 0px 35px 24px 0px;
@@ -843,6 +860,11 @@ a.table-list-element {
     .btn-close.text-reset {
       display: none;
     }
+  }
+
+  .btn-close{
+    right:45px;
+    position: absolute;
   }
 
   h2 {
@@ -1198,7 +1220,11 @@ table.techniques-table {
 
 .database.techniques-table-wrapper {
   border: 0;
-  margin-left: 12px;
+  
+
+  @include media-breakpoint-up(xl){
+    margin-left: 12px;
+  }
 
 
   table.techniques-table {

@@ -44,7 +44,13 @@
 }
 
 .content {
-  padding: 56px 40px;
+ 
+  padding: 24px 24px;
+
+  @include media-breakpoint-up(md){
+    padding: 24px 24px;
+    padding: 56px 40px;
+  }
 
   h2 {
     font-family: "Yantramanav", serif;

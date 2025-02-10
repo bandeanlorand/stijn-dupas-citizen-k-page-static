@@ -81,9 +81,13 @@
 
 .content-dropdown {
   flex-grow: 1;
-  padding: 20px;
+  padding: 20px 0;
   overflow-y: auto;
   transition: all ease 0.2s;
+
+  @include media-breakpoint-up(md){
+    padding: 20px;
+  }
 
   >div {
     display: none;

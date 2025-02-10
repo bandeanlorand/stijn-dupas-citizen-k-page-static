@@ -14,7 +14,7 @@
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
         <li class="breadcrumb-item"><a href="#">Vlaams Kenniscentrum voor Beste Beschikbare Technieken</a></li>
-        <li class="breadcrumb-item"><a href="#">BBT-tools</a></li>
+        <li class="breadcrumb-item"><a href="#">BBT-Tools</a></li>
         <li class="breadcrumb-item active" aria-current="page">Selectiesystemen</li>
       </ol>
     </nav>
@@ -51,8 +51,13 @@
 
     <section class="content pb-5">
       <div class="row equal-height-row card-row">
-        <div class="row">
+ 
           <div class="col-12 col-xl-4 custom-col">
+            <!-- menu container slide in what is used for desktop and mobile - start here -->
+          <div class="offcanvas offcanvas-start article-menu-canvas" tabindex="-1" id="showArticleListMenuMobile"
+          aria-labelledby="offcanvasMenuBlock">
+          <button type="button" class="btn-close btn-reset-canvas" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
             <div class="link-menu-one-level">
               <ul>
                 <li><a href="#" data-target="content-1">Afvalstromen</a></li>
@@ -60,8 +65,14 @@
               </ul>
             </div>
           </div>
+          <!-- menu container slide in what is used for desktop and mobile - ends here -->
+          </div>
           <div class="col-12 col-xl-8">
             <div class="content-dropdown pt-0">
+              <!-- Button that opens side menu with article list - button is not visible on desktop this - starts here -->
+            <button type="button" class="btn btn-show-article-menu-mobile" data-bs-toggle="offcanvas"
+            data-bs-target="#showArticleListMenuMobile">Applicatie</button>
+          <!-- Button that opens side menu with article list - button is not visible on desktop this - ends here -->
               <div id="content-1">
                 <h2>Afvalstromen zoeken</h2>
 
@@ -98,7 +109,7 @@
 
             </div>
           </div>
-        </div>
+        
 
       </div>
     </section>

@@ -2,10 +2,11 @@
 header {
   background: $header-bg-green;
   background: #cdefe1;
-  padding: 16px 40px 16px 40px;
+  padding: 16px 24px 16px 24px;
   position: relative;
-  @include media-breakpoint-up(xl){
+  @include media-breakpoint-up(md){
     padding-right: 376px;
+    padding: 16px 40px 16px 40px;
   }
 
   &.full-width{
@@ -34,6 +35,11 @@ header {
     line-height: 47px;
     padding: 0px 0;
     margin-bottom: 8px;
+    word-break: break-all;
+
+    @include media-breakpoint-up(md){
+      word-break: normal;
+    }
   }
 
   ul {
@@ -66,9 +72,12 @@ header {
   }
 
   &.no-breadcrumb{
-    padding:48px 40px 48px 40px;
-
+    padding:32px 24px 24px 24px;
     
+
+    @include media-breakpoint-up(xl) {
+      padding:48px 40px 48px 40px;
+    }
   }
 }
 

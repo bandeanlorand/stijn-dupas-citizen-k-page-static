@@ -14,7 +14,7 @@
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
         <li class="breadcrumb-item"><a href="#">Vlaams Kenniscentrum voor Beste Beschikbare Technieken</a></li>
-        <li class="breadcrumb-item active" aria-current="page">BBT-Tools</li>
+        <li class="breadcrumb-item"><a href="#">BBT-Tools</a></li>
         <li class="breadcrumb-item active" aria-current="page">Selectiesystemen</li>
       </ol>
     </nav>
@@ -54,8 +54,13 @@
 
     <section class="content pb-5">
       <div class="row equal-height-row card-row">
-        <div class="row">
-          <div class="col-12 col-xl-4 custom-col">
+
+        <div class="col-12 col-xl-4 custom-col">
+          <!-- menu container slide in what is used for desktop and mobile - start here -->
+          <div class="offcanvas offcanvas-start article-menu-canvas" tabindex="-1" id="showArticleListMenuMobile"
+            aria-labelledby="offcanvasMenuBlock">
+            <button type="button" class="btn-close btn-reset-canvas" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
             <div class="link-menu-one-level">
               <ul>
                 <li><a href="#" data-target="content-1">Inleiding</a></li>
@@ -65,51 +70,56 @@
               </ul>
             </div>
           </div>
-          <div class="col-12 col-xl-8">
-            <div class="content-dropdown pt-0">
-              <div id="content-1">
-                <h2>Inleiding</h2>
-                <p>Het beslissingsondersteunend systeem voor waterbodemsaneringstechnieken (BOSS WB) maakt deel uit van
-                  het INTERREG-project 'Sullied Sediments'. Het BOSS WB is opgesteld door de VITO in opdracht van de
-                  OVAM. De OVAM is één van de Belgische partners in het Sullied Sediments-project.</p>
-                  
-                <p>Het BOSS WB is gebaseerd op de studie 'Desk-studie over beschikbare saneringstechnieken voor
-                  verontreinigde waterbodem'. Deze studie werd opgemaakt door een consortium dat bestaat uit
-                  waterbodemsaneringsexperten van het engineering- en consultancybedrijf Witteveen+Bos N.V. en de
-                  milieuaannemers DEME-DEC, Jan De Nul-Envisan en Ghent Dredging.</p>
+          <!-- menu container slide in what is used for desktop and mobile - ends here -->
+        </div>
+        <div class="col-12 col-xl-8">
+          <div class="content-dropdown pt-0">
+            <!-- Button that opens side menu with article list - button is not visible on desktop this - starts here -->
+            <button type="button" class="btn btn-show-article-menu-mobile" data-bs-toggle="offcanvas"
+              data-bs-target="#showArticleListMenuMobile">Applicatie</button>
+            <!-- Button that opens side menu with article list - button is not visible on desktop this - ends here -->
+            <div id="content-1">
+              <h2>Inleiding</h2>
+              <p>Het beslissingsondersteunend systeem voor waterbodemsaneringstechnieken (BOSS WB) maakt deel uit van
+                het INTERREG-project 'Sullied Sediments'. Het BOSS WB is opgesteld door de VITO in opdracht van de
+                OVAM. De OVAM is één van de Belgische partners in het Sullied Sediments-project.</p>
 
-                <p>Het doel van deze studie, en het BOSS WB is kennisoverdracht van saneringstechnieken voor waterbodems
-                  naar Europese bodemsaneringsdeskundigen, beleidsmakers, bedrijven, waterloopbeheerders en private
-                  personen. De studie en het BOSS WB ondersteunen u bij het maken van beslissingen over het beheer, de
-                  verwijdering en de ruiming van verontreinigd sediment. Zo kan u zo kostenefficiënt en effectief
-                  mogelijk saneren en de impact van verontreinigende stoffen op het milieu zoveel mogelijk beperken.</p>
+              <p>Het BOSS WB is gebaseerd op de studie 'Desk-studie over beschikbare saneringstechnieken voor
+                verontreinigde waterbodem'. Deze studie werd opgemaakt door een consortium dat bestaat uit
+                waterbodemsaneringsexperten van het engineering- en consultancybedrijf Witteveen+Bos N.V. en de
+                milieuaannemers DEME-DEC, Jan De Nul-Envisan en Ghent Dredging.</p>
 
-                <p>Dit BOSS WB geeft u een overzicht van de haalbare saneringstechnieken voor waterbodems binnen
-                  specifieke randvoorwaarden. Als bepaalde saneringstechnieken niet haalbaar zijn met deze
-                  randvoorwaarden (bijvoorbeeld wanneer de timing of de saneringsdoelstelling niet kunnen worden
-                  gehaald), geeft het BOSS WB een samenvatting van de beperkende factoren waarmee u rekening moet
-                  houden.</p>
+              <p>Het doel van deze studie, en het BOSS WB is kennisoverdracht van saneringstechnieken voor waterbodems
+                naar Europese bodemsaneringsdeskundigen, beleidsmakers, bedrijven, waterloopbeheerders en private
+                personen. De studie en het BOSS WB ondersteunen u bij het maken van beslissingen over het beheer, de
+                verwijdering en de ruiming van verontreinigd sediment. Zo kan u zo kostenefficiënt en effectief
+                mogelijk saneren en de impact van verontreinigende stoffen op het milieu zoveel mogelijk beperken.</p>
 
-                <p>De beschrijvingen van de technieken zijn in de vorm van technische fiches opgenomen. Deze fiches kunt
-                  u afzonderlijk raadplegen.</p>
+              <p>Dit BOSS WB geeft u een overzicht van de haalbare saneringstechnieken voor waterbodems binnen
+                specifieke randvoorwaarden. Als bepaalde saneringstechnieken niet haalbaar zijn met deze
+                randvoorwaarden (bijvoorbeeld wanneer de timing of de saneringsdoelstelling niet kunnen worden
+                gehaald), geeft het BOSS WB een samenvatting van de beperkende factoren waarmee u rekening moet
+                houden.</p>
 
-                <p>Waterbodemsaneringstechnieken evolueren voortdurend. De kans is dan ook groot dat er in de (nabije)
-                  toekomst nieuwe inzichten aan de studie en het BOSS worden toegevoegd. We beschouwen zowel de
-                  desk-studie als het BOSS WB als 'work in progress'.</p>
+              <p>De beschrijvingen van de technieken zijn in de vorm van technische fiches opgenomen. Deze fiches kunt
+                u afzonderlijk raadplegen.</p>
 
-              </div>
-              <div id="content-2">
-                <h2>Technieken</h2>
-                <p>Details about Technieken.</p>
-              </div>
-              <div id="content-3">
-                <h2>Start simulatie saneringstechnieken</h2>
-                <p>Details about Start simulatie saneringstechnieken.</p>
-              </div>
-              <div id="content-4">
-                <h2>Start simulatie behandeltechnieken</h2>
-                <p>Details about Start simulatie behandeltechnieken.</p>
-              </div>
+              <p>Waterbodemsaneringstechnieken evolueren voortdurend. De kans is dan ook groot dat er in de (nabije)
+                toekomst nieuwe inzichten aan de studie en het BOSS worden toegevoegd. We beschouwen zowel de
+                desk-studie als het BOSS WB als 'work in progress'.</p>
+
+            </div>
+            <div id="content-2">
+              <h2>Technieken</h2>
+              <p>Details about Technieken.</p>
+            </div>
+            <div id="content-3">
+              <h2>Start simulatie saneringstechnieken</h2>
+              <p>Details about Start simulatie saneringstechnieken.</p>
+            </div>
+            <div id="content-4">
+              <h2>Start simulatie behandeltechnieken</h2>
+              <p>Details about Start simulatie behandeltechnieken.</p>
             </div>
           </div>
         </div>

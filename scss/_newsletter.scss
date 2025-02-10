@@ -23,7 +23,12 @@
   }
 }
 .container{
-  padding: 32px 32px;
+  
+  padding: 24px 24px;
+
+  @include media-breakpoint-up(md){
+    padding: 32px 32px;
+  }
 }
   h4 {
     font-family: "Yantramanav", serif;
