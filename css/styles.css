@@ -1,5 +1,6 @@
 @charset "UTF-8";
-body, html {
+body,
+html {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -8916,10 +8917,12 @@ progress {
   --bs-secondary-color: $primary;
 }
 
-.animated-height {
-  transform: scaleY(1);
-  transform-origin: top;
-  transition: all 2.3s ease-in-out;
+@media (min-width: 1200px) {
+  .animated-height {
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: all 2.3s ease-in-out;
+  }
 }
 
 .p-16 {
@@ -9210,7 +9213,7 @@ main.container {
 }
 
 /* Content styles */
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .col-12.col-xl-4.custom-col {
     max-width: 410px;
   }
@@ -9218,9 +9221,13 @@ main.container {
 
 .content-nested-dropdown {
   flex-grow: 1;
-  padding: 20px;
   overflow-y: auto;
   transition: all ease 0.1s;
+}
+@media (min-width: 992px) {
+  .content-nested-dropdown {
+    padding: 20px;
+  }
 }
 .content-nested-dropdown > div {
   display: none;
@@ -9528,9 +9535,14 @@ header.no-breadcrumb {
 /* header navigation tabs - styles starts here */
 .nav-tabs {
   background: #F0EFEF;
-  padding: 8px 40px;
+  padding: 8px 24px;
   border-bottom: 0;
   position: relative;
+}
+@media (min-width: 768px) {
+  .nav-tabs {
+    padding: 8px 40px;
+  }
 }
 .nav-tabs .nav-link {
   border-radius: 8px;
@@ -9540,11 +9552,17 @@ header.no-breadcrumb {
   font-family: "Work Sans", serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 28px;
-  padding: 10px 20px;
+  padding: 10px 12px;
   margin-bottom: 0;
   transition: all ease 0.2s;
+}
+@media (min-width: 768px) {
+  .nav-tabs .nav-link {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
 }
 .nav-tabs .nav-link.active {
   background: #237B6C;
@@ -9733,7 +9751,7 @@ nav.techniques-table + .table-filtering {
   align-items: flex-start;
   align-content: center;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .table-filtering {
     margin-left: 12px;
     flex-direction: row;
@@ -10457,6 +10475,12 @@ a.table-list-element:hover a {
 .offcanvas.offcanvas-start.filter-block-canvas .btn-close {
   right: 45px;
   position: absolute;
+  color: #2E3333;
+  opacity: 0.9;
+  width: 13.5px;
+  height: 13.5px;
+  background-size: 13.5px 13.5px;
+  top: 10px;
 }
 .offcanvas.offcanvas-start.filter-block-canvas h2 {
   height: 31px;
@@ -10849,11 +10873,20 @@ table.techniques-table tr.border-bottom {
   align-items: flex-start;
   flex-flow: row;
   align-content: center;
-  padding: 16px 20px;
+  flex-direction: column;
+  padding: 16px 20px 16px 48px;
+}
+@media (min-width: 576px) {
+  .download-element a {
+    flex-flow: row;
+    align-content: center;
+  }
 }
 .download-element a::before {
   margin-right: 12px;
   margin-top: 9px;
+  margin-left: -38px;
+  position: absolute;
 }
 .download-element a:hover {
   background-color: rgba(93, 229, 165, 0.1);
@@ -10913,24 +10946,34 @@ table.techniques-table tr.border-bottom {
   font-size: 18px;
   line-height: 28px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   text-align: center;
+  flex-direction: column;
   color: rgb(46, 51, 51);
   margin-bottom: 0;
   padding-bottom: 0;
 }
+@media (min-width: 576px) {
+  .download-element .details h3 {
+    flex-direction: row;
+    align-items: center;
+  }
+}
 .download-element .details span {
-  height: 20px;
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  padding: 0 0 0 8px;
+  padding: 0 0 0 0;
   min-width: 105px;
 }
+@media (min-width: 576px) {
+  .download-element .details span {
+    padding: 0 0 0 8px;
+  }
+}
 .download-element p {
-  height: 20px;
   margin-bottom: 0;
   font-family: "Work Sans";
   font-style: normal;
@@ -10944,8 +10987,13 @@ ul.external-links {
   margin-bottom: 0;
   display: inline-block;
   padding-bottom: 16px;
-  margin-left: 62px;
+  margin-left: 12px;
   margin-top: 4px;
+}
+@media (min-width: 576px) {
+  ul.external-links {
+    margin-left: 62px;
+  }
 }
 ul.external-links li {
   position: relative;
@@ -11552,6 +11600,11 @@ ul.link-block a::after {
 .content-card-figure:last-of-type {
   margin-bottom: 32px !important;
 }
+@media (min-width: 1200px) {
+  .content-card-figure:last-of-type {
+    margin-bottom: 24px !important;
+  }
+}
 
 /* content card with image  - styles ends here */
 /* content toggle list with image - styles starts here */
@@ -11787,6 +11840,7 @@ ul.link-block a::after {
 }
 .content-search .links li {
   border-bottom: 0;
+  margin-bottom: 16px;
 }
 .content-search .links li:before {
   display: none;
@@ -11797,6 +11851,7 @@ ul.link-block a::after {
   text-decoration: none;
   color: rgb(46, 51, 51);
   margin-bottom: 16px;
+  display: inline;
 }
 .content-search .links a::before {
   content: "";
@@ -11807,7 +11862,7 @@ ul.link-block a::after {
   height: 28px;
   display: block;
   left: -32px;
-  top: 0;
+  top: -1px;
 }
 .content-search .links a:hover {
   color: #237B6C;
@@ -11822,11 +11877,11 @@ ul.link-block a::after {
   font-weight: 600;
   font-size: 14px;
   line-height: 14px;
-  display: flex;
+  display: inline-block;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  padding: 17px 12px;
+  padding: 15px 12px;
   gap: 8px;
   background: #0A6076;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
@@ -11835,6 +11890,10 @@ ul.link-block a::after {
   margin-bottom: 32px;
   width: 100%;
   max-width: 380px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 @media (min-width: 1200px) {
   .btn-show-article-menu-mobile {
@@ -11860,6 +11919,11 @@ ul.link-block a::after {
   height: 17px;
   display: block;
   background-color: #fff;
+  display: inline-flex;
+  position: relative;
+  float: left;
+  margin-right: 5px;
+  margin-top: -1px;
 }
 @media (min-width: 1200px) {
   .btn-show-article-menu-mobile {
@@ -11871,7 +11935,7 @@ ul.link-block a::after {
   padding: 64px 24px 24px 24px;
   overflow: auto;
   height: 100%;
-  --bs-offcanvas-width:428px !important;
+  --bs-offcanvas-width: 428px !important;
 }
 @media (min-width: 1200px) {
   .offcanvas.offcanvas-start.article-menu-canvas {
@@ -11901,6 +11965,7 @@ ul.link-block a::after {
   opacity: 0.9;
   width: 13.5px;
   height: 13.5px;
+  background-size: 13.5px 13.5px;
 }
 .offcanvas.offcanvas-start.article-menu-canvas h2 {
   height: 31px;

@@ -91,6 +91,9 @@
   }
 
   &:last-of-type {
+    @include media-breakpoint-up(xl){
+      margin-bottom: 24px !important;
+    }
     margin-bottom: 32px !important;
   }
 }

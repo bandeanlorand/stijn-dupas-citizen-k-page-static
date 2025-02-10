@@ -74,6 +74,7 @@
     flex-direction: column;
     li{
       border-bottom: 0;
+      margin-bottom: 16px;
 
       &:before{
         display: none;
@@ -86,6 +87,7 @@
       text-decoration: none;
       color: $primary;
       margin-bottom: 16px;
+      display: inline;
       &::before {
         content: '';
         position: absolute;
@@ -95,7 +97,7 @@
         height: 28px;
         display: block;
         left: -32px;
-        top: 0;
+        top: -1px;
     }
 
       &:hover{

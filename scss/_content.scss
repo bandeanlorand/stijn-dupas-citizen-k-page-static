@@ -310,16 +310,19 @@
 /* Content styles */
 
 .col-12.col-xl-4.custom-col {
-  @include media-breakpoint-up(xl) {
+  @include media-breakpoint-up(lg) {
     max-width: 410px;
   }
 }
 
 .content-nested-dropdown {
   flex-grow: 1;
-  padding: 20px;
+  
   overflow-y: auto;
   transition: all ease 0.1s;
+  @include media-breakpoint-up(lg) {
+    padding: 20px;
+  }
 
   >div {
     display: none;

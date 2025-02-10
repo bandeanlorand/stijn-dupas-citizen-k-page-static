@@ -57,11 +57,11 @@ nav.techniques-table {
   align-content: center;
   
 
-  @include media-breakpoint-up(xl){
+  @include media-breakpoint-up(lg){
     margin-left: 12px;
     flex-direction: row;
-  align-items: center;
-  align-content: center;
+    align-items: center;
+    align-content: center;
   }
 
   .pagination-info {
@@ -865,6 +865,12 @@ a.table-list-element {
   .btn-close{
     right:45px;
     position: absolute;
+    color:#2E3333;
+    opacity: 0.9;
+    width: 13.5px;
+    height: 13.5px;
+    background-size: 13.5px 13.5px;
+    top: 10px;
   }
 
   h2 {

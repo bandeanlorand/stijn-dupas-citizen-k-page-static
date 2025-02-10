@@ -12,33 +12,63 @@ document.querySelectorAll('[data-bs-toggle="popover"]')
     new bootstrap.Popover(popover)
   })
 
-  document.querySelectorAll('.link-menu a').forEach(menuLink => {
-    menuLink.addEventListener('click', function (e) {
-        const target = this.getAttribute('data-target');
+  document.addEventListener("DOMContentLoaded", function () {
+    // Update button on page load
+    updateButtonTextOnLoad();
 
-        // Handle submenu toggling
-        if (this.classList.contains('toggle')) {
-            const submenu = this.nextElementSibling;
-            submenu.classList.toggle('open');
-            this.classList.toggle('open');
-        }
+    // Attach event listener to menu links
+    document.querySelectorAll('.link-menu a').forEach(menuLink => {
+        menuLink.addEventListener('click', function (e) {
+            const target = this.getAttribute('data-target');
 
-        // Remove active class from all menu items
-        document.querySelectorAll('.link-menu a').forEach(link => link.classList.remove('active'));
-        this.classList.add('active');
+            // Handle submenu toggling
+            if (this.classList.contains('toggle')) {
+                const submenu = this.nextElementSibling;
+                submenu.classList.toggle('open');
+                this.classList.toggle('open');
+            }
 
-        // Hide all content sections
-        document.querySelectorAll('.content-nested-dropdown > div').forEach(content => content.classList.remove('active'));
+            // Remove active class from all menu items
+            document.querySelectorAll('.link-menu a').forEach(link => link.classList.remove('active'));
+            this.classList.add('active');
 
-        // Show the target content
-        if (target) {
-            document.getElementById(target).classList.add('active');
-        }
+            // Hide all content sections
+            document.querySelectorAll('.content-nested-dropdown > div').forEach(content => content.classList.remove('active'));
 
-        // Automatically open parent menus if active
-        openParentMenus(this);
+            // Show the target content
+            if (target) {
+                document.getElementById(target).classList.add('active');
+            }
+
+            // Automatically open parent menus if active
+            openParentMenus(this);
+
+            // Update the button with the active menu text
+            updateButtonText(this.textContent);
+        });
     });
 });
+
+// Function to update the button text with the active menu item text
+function updateButtonText(activeText) {
+    const button = document.querySelector('.btn-show-article-menu-mobile');
+    if (button) {
+        button.textContent = activeText; // Change button text to match active menu link
+    }
+}
+
+// Function to set button text based on active menu item when the page loads
+function updateButtonTextOnLoad() {
+    const activeLink = document.querySelector('.link-menu a.active'); // Find the active menu item
+
+    // Check if an active link exists before updating the button
+    if (activeLink) {
+        updateButtonText(activeLink.textContent);
+    } else {
+        console.warn("No active menu item found on page load.");
+    }
+}
+
 
 function openParentMenus(activeLink) {
     let parent = activeLink.parentElement.parentElement;
@@ -582,14 +612,39 @@ document.addEventListener("DOMContentLoaded", function () {
       // Show the target content
       const targetId = menuLink.getAttribute("data-target");
       if (targetId) {
-          document.getElementById(targetId).classList.add("active");
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+              targetElement.classList.add("active");
+          } else {
+              console.warn(`Target element with ID "${targetId}" not found.`);
+          }
+      }
+
+      // Update button text with active menu item text
+      updateButtonText(menuLink.textContent);
+  }
+
+  function updateButtonText(activeText) {
+      const button = document.querySelector(".btn-show-article-menu-mobile");
+      if (button) {
+          button.textContent = activeText; // Update button text
       }
   }
 
-  // Ensure the first menu item is selected on page load
-  if (menuLinks.length > 0) {
-      activateMenuItem(menuLinks[0]);
+  function updateButtonTextOnLoad() {
+      const activeLink = document.querySelector(".link-menu-one-level a.active");
+      if (activeLink) {
+          updateButtonText(activeLink.textContent);
+      } else if (menuLinks.length > 0) {
+          // If no active link exists, set the first menu item as active
+          activateMenuItem(menuLinks[0]);
+      } else {
+          console.warn("No menu items found.");
+      }
   }
+
+  // Ensure the correct menu item is selected on page load
+  updateButtonTextOnLoad();
 
   // Add click event to each menu item
   menuLinks.forEach(menuLink => {
@@ -599,4 +654,5 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
+
 /* script for one level menu ends here */

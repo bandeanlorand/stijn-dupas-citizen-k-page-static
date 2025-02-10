@@ -855,6 +855,11 @@
         <div class="tab-pane fade" id="description" role="tabpanel">
           <div class="row">
             <div class="col-12 col-xl-4 custom-col">
+              <!-- menu container slide in what is used for desktop and mobile - start here -->
+          <div class="offcanvas offcanvas-start article-menu-canvas" tabindex="-1" id="showArticleListMenuMobile"
+          aria-labelledby="offcanvasMenuBlock">
+          <button type="button" class="btn-close btn-reset-canvas" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
               <div class="link-menu">
                 <ul>
                   <li class="mt-0">
@@ -923,8 +928,14 @@
                 </ul>
               </div>
             </div>
+            <!-- menu container slide in what is used for desktop and mobile - ends here -->
+            </div>
             <div class="col-12 col-xl-8">
               <div class="content-nested-dropdown pt-0">
+                <!-- Button that opens side menu with article list - button is not visible on desktop this - starts here -->
+            <button type="button" class="btn btn-show-article-menu-mobile" data-bs-toggle="offcanvas"
+            data-bs-target="#showArticleListMenuMobile">Overzicht</button>
+          <!-- Button that opens side menu with article list - button is not visible on desktop this - ends here -->
                 <div id="default-content" class="active">
                   <h2>Procesbeschrijving en milieu-impact</h2>
                   <p>In dit deel beschrijven we de verschillende types stookinstallaties, stationaire motoren en
