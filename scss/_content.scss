@@ -317,10 +317,9 @@
 
 .content-nested-dropdown {
   flex-grow: 1;
-  
   overflow-y: auto;
   transition: all ease 0.1s;
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xl) {
     padding: 20px;
   }
 
