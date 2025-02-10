@@ -9707,7 +9707,7 @@ nav.techniques-table button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 17px 16px;
+  padding: 14px 10px;
   box-shadow: none;
   border-radius: 1000px;
   font-family: "Work Sans";
@@ -9717,7 +9717,13 @@ nav.techniques-table button {
   line-height: 14px;
   color: rgb(46, 51, 51);
   border: none;
-  margin: 0 16px 0 0;
+  margin: 0 8px 0 0;
+}
+@media (min-width: 768px) {
+  nav.techniques-table button {
+    padding: 17px 16px;
+    margin: 0 16px 0 0;
+  }
 }
 nav.techniques-table button.activeTab, nav.techniques-table button:hover {
   color: #fff;
@@ -9750,8 +9756,9 @@ nav.techniques-table + .table-filtering {
   flex-direction: column;
   align-items: flex-start;
   align-content: center;
+  gap: 8px;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .table-filtering {
     margin-left: 12px;
     flex-direction: row;
@@ -9797,6 +9804,10 @@ nav.techniques-table + .table-filtering {
   text-decoration: underline;
   color: #237B6C;
   padding: 9px 0;
+}
+.filter-nr:empty {
+  height: 0;
+  padding: 0;
 }
 
 /* styles for filtered number ends here */
@@ -9977,17 +9988,27 @@ nav.techniques-table + .table-filtering {
   position: absolute;
   display: none;
   top: 100%;
-  left: -8px;
+  left: -40px;
   z-index: 1050;
   background-color: white;
   border-radius: 5px;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
   padding: 20px;
   min-width: 300px;
+  width: calc(100vw - 16px);
   border-radius: 8px;
 }
-.custom-popup.aspect {
-  min-width: 400px;
+@media (min-width: 576px) {
+  .custom-popup {
+    left: -8px;
+    min-width: 300px;
+    width: auto;
+  }
+}
+@media (min-width: 576px) {
+  .custom-popup.aspect {
+    min-width: 400px;
+  }
 }
 .custom-popup .custom-popup-header {
   display: flex;
