@@ -39,7 +39,12 @@
     <section class="content pb-5">
       <div class="row equal-height-row card-row">
 
-          <div class="col-12 col-xl-4 custom-col">
+        <div class="col-12 col-xl-4 custom-col">
+          <!-- menu container slide in what is used for desktop and mobile - start here -->
+          <div class="offcanvas offcanvas-start article-menu-canvas" tabindex="-1" id="showArticleListMenuMobile"
+            aria-labelledby="offcanvasMenuBlock">
+            <button type="button" class="btn-close btn-reset-canvas" data-bs-dismiss="offcanvas"
+              aria-label="Close"></button>
             <div class="link-menu-one-level">
               <ul>
                 <li><a href="#" data-target="content-1">Technieken</a></li>
@@ -50,48 +55,54 @@
               </ul>
             </div>
           </div>
-          <div class="col-12 col-xl-8">
-            <div class="content-dropdown pt-0">
-              <div id="content-1">
-                <h2>Technieken</h2>
-                <p>Bij het op- en overslaan van droge bulkgoederen komen aanzienlijke hoeveelheden diffuus stof in de
-                  buitenlucht terecht. Grof stof kan lokaal voor heel wat hinder zorgen. Daarnaast wordt echter ook fijn
-                  stof (&lt;PM10) geproduceerd. De fijne (&lt;PM 10) en ultrafijne (PM 2.5) stoffracties kunnen zich
-                  over veel grotere afstanden verspreiden en worden geassocieerd met tal van negatieve
-                  gezondheidseffecten.</p>
+          <!-- menu container slide in what is used for desktop and mobile - ends here -->
+        </div>
+        <div class="col-12 col-xl-8">
+          <div class="content-dropdown pt-0">
+            <!-- Button that opens side menu with article list - button is not visible on desktop this - starts here -->
+            <button type="button" class="btn btn-show-article-menu-mobile" data-bs-toggle="offcanvas"
+              data-bs-target="#showArticleListMenuMobile">Applicatie</button>
+            <!-- Button that opens side menu with article list - button is not visible on desktop this - ends here -->
+            <div id="content-1">
+              <h2>Technieken</h2>
+              <p>Bij het op- en overslaan van droge bulkgoederen komen aanzienlijke hoeveelheden diffuus stof in de
+                buitenlucht terecht. Grof stof kan lokaal voor heel wat hinder zorgen. Daarnaast wordt echter ook fijn
+                stof (&lt;PM10) geproduceerd. De fijne (&lt;PM 10) en ultrafijne (PM 2.5) stoffracties kunnen zich
+                over veel grotere afstanden verspreiden en worden geassocieerd met tal van negatieve
+                gezondheidseffecten.</p>
 
-                <p>De 45 technische fiches in onderstaande tabel vatten daarom de huidige stand van zaken rond
-                  stofreducerende technieken bij op- en overslag van droge bulkgoederen samen. Ze omvatten enkel
-                  technieken waarvan de werking op industriële schaal bewezen is. De fiches worden opgedeeld in primaire
-                  en secundaire maatregelen enerzijds en organisatorische, technische en constructiemaatregelen
-                  anderzijds. Onder primaire maatregelen verstaat men maatregelen die de vorming van stof verhinderen.
-                  Secundaire maatregelen beperken de emissies van het ontstane stof naar de omgeving.</p>
+              <p>De 45 technische fiches in onderstaande tabel vatten daarom de huidige stand van zaken rond
+                stofreducerende technieken bij op- en overslag van droge bulkgoederen samen. Ze omvatten enkel
+                technieken waarvan de werking op industriële schaal bewezen is. De fiches worden opgedeeld in primaire
+                en secundaire maatregelen enerzijds en organisatorische, technische en constructiemaatregelen
+                anderzijds. Onder primaire maatregelen verstaat men maatregelen die de vorming van stof verhinderen.
+                Secundaire maatregelen beperken de emissies van het ontstane stof naar de omgeving.</p>
 
-                <p>Klik op de techniek om meer informatie te verkrijgen.</p>
+              <p>Klik op de techniek om meer informatie te verkrijgen.</p>
 
-                <p>De technische informatie van de stoffiches kan ook in boekvorm worden geconsulteerd: &quot;Gids
-                  reductietechnieken voor diffuse stofemissies bij op- en overslag van droge bulkgoederen&quot; te
-                  bestellen bij Artoos.</p>
-              </div>
-              <div id="content-2">
-                <h2>Stuifklassen</h2>
-                <p>Details about Stuifklassen.</p>
-              </div>
-              <div id="content-3">
-                <h2>Primaire maatregelen</h2>
-                <p>Details about Primaire maatregelen.</p>
-              </div>
-              <div id="content-4">
-                <h2>Secundaire maatregelen</h2>
-                <p>Details about Secundaire maatregelen.</p>
-              </div>
-              <div id="content-5">
-                <h2>Referenties</h2>
-                <p>Details about Referenties.</p>
-              </div>
+              <p>De technische informatie van de stoffiches kan ook in boekvorm worden geconsulteerd: &quot;Gids
+                reductietechnieken voor diffuse stofemissies bij op- en overslag van droge bulkgoederen&quot; te
+                bestellen bij Artoos.</p>
+            </div>
+            <div id="content-2">
+              <h2>Stuifklassen</h2>
+              <p>Details about Stuifklassen.</p>
+            </div>
+            <div id="content-3">
+              <h2>Primaire maatregelen</h2>
+              <p>Details about Primaire maatregelen.</p>
+            </div>
+            <div id="content-4">
+              <h2>Secundaire maatregelen</h2>
+              <p>Details about Secundaire maatregelen.</p>
+            </div>
+            <div id="content-5">
+              <h2>Referenties</h2>
+              <p>Details about Referenties.</p>
             </div>
           </div>
-    
+        </div>
+
 
       </div>
     </section>
