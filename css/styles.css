@@ -9865,7 +9865,6 @@ nav.techniques-table + .table-filtering {
 
 /* filter block for databse table checkbox starts here */
 .filter-block {
-  border-bottom: 1px solid rgb(206, 212, 218);
   margin-bottom: 24px;
 }
 .filter-block h3.filter-block-title {
@@ -9984,25 +9983,66 @@ nav.techniques-table + .table-filtering {
   top: -1px;
 }
 
+@media (max-width: 575.98px) {
+  body.popup-opened {
+    overflow: hidden;
+  }
+}
+
+.filter-button-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .custom-popup {
-  position: absolute;
-  display: none;
-  top: 100%;
-  left: -40px;
-  z-index: 1050;
+  position: fixed;
+  bottom: 0;
+  z-index: var(--bs-offcanvas-zindex);
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  color: var(--bs-offcanvas-color);
+  visibility: visible;
   background-color: white;
-  border-radius: 5px;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+  background-clip: padding-box;
+  outline: 0;
+  top: 0;
   padding: 20px;
-  min-width: 300px;
-  width: calc(100vw - 16px);
-  border-radius: 8px;
+  width: 100vw;
+  z-index: 11;
+  left: -100vw;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+.custom-popup.active {
+  opacity: 1;
+  visibility: visible;
+  left: 0;
+}
+@media (min-width: 576px) {
+  .custom-popup.active {
+    display: block;
+  }
 }
 @media (min-width: 576px) {
   .custom-popup {
     left: -8px;
     min-width: 300px;
     width: auto;
+    bottom: unset;
+    position: absolute;
+    display: none;
+    top: 100%;
+    z-index: 1050;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    min-width: 300px;
+    width: calc(100vw - 16px);
+    border-radius: 8px;
   }
 }
 @media (min-width: 576px) {
@@ -10027,6 +10067,9 @@ nav.techniques-table + .table-filtering {
 .custom-popup .custom-popup-header .btn-close {
   font-size: 12px;
   padding: 5px;
+}
+.custom-popup .custom-popup-header .btn-close:focus {
+  box-shadow: none;
 }
 .custom-popup .apply-filter {
   float: right;
@@ -10069,7 +10112,6 @@ nav.techniques-table + .table-filtering {
   border: 0;
 }
 .custom-popup .dropdown .dropdown-menu .filter-title {
-  /* Technische aspecten */
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -10179,7 +10221,7 @@ nav.techniques-table + .table-filtering {
   max-height: 100vh;
   display: none;
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .filter-container {
     margin-left: 12px;
     display: block;
@@ -10473,7 +10515,7 @@ a.table-list-element:hover a {
   padding: 48px 24px 24px 24px;
   overflow: auto;
   height: 100%;
-  --bs-offcanvas-width:428px !important;
+  --bs-offcanvas-width: 428px !important;
 }
 @media (min-width: 1200px) {
   .offcanvas.offcanvas-start.filter-block-canvas {
@@ -10502,6 +10544,9 @@ a.table-list-element:hover a {
   height: 13.5px;
   background-size: 13.5px 13.5px;
   top: 10px;
+}
+.offcanvas.offcanvas-start.filter-block-canvas .btn-close:focus {
+  box-shadow: none;
 }
 .offcanvas.offcanvas-start.filter-block-canvas h2 {
   height: 31px;
@@ -11987,6 +12032,9 @@ ul.link-block a::after {
   width: 13.5px;
   height: 13.5px;
   background-size: 13.5px 13.5px;
+}
+.offcanvas.offcanvas-start.article-menu-canvas .btn-close:focus {
+  box-shadow: none;
 }
 .offcanvas.offcanvas-start.article-menu-canvas h2 {
   height: 31px;

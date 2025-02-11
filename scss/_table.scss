@@ -19,10 +19,11 @@ nav.techniques-table {
     border: none;
     margin: 0 8px 0 0;
 
-    @include media-breakpoint-up(md){
+    @include media-breakpoint-up(md) {
       padding: 17px 16px;
       margin: 0 16px 0 0;
     }
+
     &.activeTab,
     &:hover {
       color: #fff;
@@ -58,10 +59,10 @@ nav.techniques-table {
   flex-direction: column;
   align-items: flex-start;
   align-content: center;
-  gap:8px;
-  
+  gap: 8px;
 
-  @include media-breakpoint-up(md){
+
+  @include media-breakpoint-up(md) {
     margin-left: 12px;
     flex-direction: row;
     align-items: center;
@@ -76,8 +77,8 @@ nav.techniques-table {
     line-height: 28px;
     text-align: right;
     color: $primary;
-    
-    @include media-breakpoint-up(xl){
+
+    @include media-breakpoint-up(xl) {
       margin-left: auto;
     }
 
@@ -108,7 +109,8 @@ nav.techniques-table {
   text-decoration: underline;
   color: $primary-green;
   padding: 9px 0;
-  &:empty{
+
+  &:empty {
     height: 0;
     padding: 0;
   }
@@ -175,8 +177,7 @@ nav.techniques-table {
 /* filter block for databse table checkbox starts here */
 
 .filter-block {
-  // padding-bottom: 24px;
-  border-bottom: 1px solid rgba(206, 212, 218, 1);
+  // padding-bottom: 24px;  border-bottom: 1px solid rgba(206, 212, 218, 1);
   margin-bottom: 24px;
 
   h3.filter-block-title {
@@ -217,7 +218,6 @@ nav.techniques-table {
   }
 
   .filter-block-list {
-    // max-height: 1000px;
     max-height: 100vh;
     transition: max-height 0.3s ease, padding 0.3s ease;
     margin-bottom: 12px;
@@ -317,29 +317,71 @@ nav.techniques-table {
   }
 }
 
-.custom-popup {
-  position: absolute;
-  display: none;
-  top: 100%;
-  left: -40px;
-  z-index: 1050;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  min-width: 300px;
-  width: calc(100vw - 16px);
-  border-radius: 8px;
+body.popup-opened {
+  @include media-breakpoint-down(sm){
+    overflow: hidden;
+  }
+}
 
-  @include media-breakpoint-up(sm){
+.filter-button-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.custom-popup {
+  position: fixed;
+  bottom: 0;
+  z-index: var(--bs-offcanvas-zindex);
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  color: var(--bs-offcanvas-color);
+  visibility: visible;
+  background-color: white;
+  background-clip: padding-box;
+  outline: 0;
+  top: 0;
+
+  padding: 20px;
+  width: 100vw;
+  z-index: 11;
+  left: -100vw;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+
+    @include media-breakpoint-up(sm) {
+      display: block;
+    }
+  }
+
+
+  @include media-breakpoint-up(sm) {
     left: -8px;
     min-width: 300px;
     width: auto;
+    bottom: unset;
+    position: absolute;
+    display: none;
+    top: 100%;
+    z-index: 1050;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    min-width: 300px;
+    width: calc(100vw - 16px);
+    border-radius: 8px;
   }
 
   &.aspect {
-    
-    @include media-breakpoint-up(sm){
+    @include media-breakpoint-up(sm) {
       min-width: 400px;
     }
   }
@@ -362,6 +404,9 @@ nav.techniques-table {
     .btn-close {
       font-size: 12px;
       padding: 5px;
+      &:focus{
+        box-shadow: none;
+      }
     }
   }
 
@@ -383,8 +428,8 @@ nav.techniques-table {
     border-radius: 8px;
     border: 0;
     transition: 0.2s ease all;
-    
-    &:hover{
+
+    &:hover {
       background-color: #165046;
     }
   }
@@ -411,7 +456,6 @@ nav.techniques-table {
       border: 0;
 
       .filter-title {
-        /* Technische aspecten */
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 400;
@@ -463,8 +507,6 @@ nav.techniques-table {
       border: 0;
     }
   }
-
-
 
   .filter-buttons {
     display: flex;
@@ -534,7 +576,8 @@ nav.techniques-table {
   transition: max-height 1.25s ease-in;
   max-height: 100vh;
   display: none;
-  @include media-breakpoint-up(xl){
+
+  @include media-breakpoint-up(lg) {
     margin-left: 12px;
     display: block;
   }
@@ -559,7 +602,7 @@ nav.techniques-table {
     transition: 0.2s ease all;
     cursor: default;
 
-    &:hover{
+    &:hover {
       background-color: #F0EFEF;
     }
 
@@ -614,7 +657,8 @@ nav.techniques-table {
 
 .datum-cell {
   width: 96px;
-  &:hover{
+
+  &:hover {
     cursor: default;
   }
 }
@@ -622,16 +666,20 @@ nav.techniques-table {
 .cell-50 {
   width: 50%;
 }
+
 .datum-wide-cell {
   width: 176px;
-  &:hover{
+
+  &:hover {
     cursor: default;
   }
 }
+
 .list-wide-cell {
   width: 193px;
 }
-.cell-50-wide{
+
+.cell-50-wide {
   width: 496px;
 }
 
@@ -646,18 +694,18 @@ td.list-table-cell {
 
 .table-links {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: flex-start;
 
-  b{
+  b {
     /* Production of Cement, Lime and Magnesium Oxide (CLM) */
-font-family: 'Work Sans';
-font-style: normal;
-font-weight: 600;
-font-size: 14px;
-line-height: 20px;
-color: #000000;
-margin-bottom: 8px;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000000;
+    margin-bottom: 8px;
   }
 }
 
@@ -671,7 +719,7 @@ a.table-list-element {
   text-decoration: none;
   color: $primary;
   margin-left: 28px;
-  display: block; 
+  display: block;
   margin-bottom: 8px;
 
 
@@ -763,10 +811,11 @@ a.table-list-element {
     background: rgba(255, 128, 31, 1);
     color: #ffffff;
   }
-  &.neutral-green{
+
+  &.neutral-green {
     background: var(--d-color-semantic-neutral-bg, rgba(10, 96, 118, 1));
     color: #ffffff;
-    
+
   }
 }
 
@@ -859,7 +908,7 @@ a.table-list-element {
   padding: 48px 24px 24px 24px;
   overflow: auto;
   height: 100%;
-  --bs-offcanvas-width:428px !important;
+  --bs-offcanvas-width: 428px !important;
 
   @include media-breakpoint-up(xl) {
     padding: 0px 35px 24px 0px;
@@ -880,15 +929,18 @@ a.table-list-element {
     }
   }
 
-  .btn-close{
-    right:45px;
+  .btn-close {
+    right: 45px;
     position: absolute;
-    color:#2E3333;
+    color: #2E3333;
     opacity: 0.9;
     width: 13.5px;
     height: 13.5px;
     background-size: 13.5px 13.5px;
     top: 10px;
+    &:focus{
+      box-shadow: none;
+    }
   }
 
   h2 {
@@ -948,20 +1000,20 @@ a.table-list-element {
       width: calc(100% + 20px);
       left: -20px;
 
-      &.filter-top{
+      &.filter-top {
         position: absolute;
         top: -104px;
         z-index: 10;
         padding-top: 22px;
         left: -22px;
 
-  
-  
-        + .filter-block{
+
+
+        +.filter-block {
           margin-top: 60px;
         }
       }
-      
+
     }
 
     .filter-block-list {
@@ -1128,7 +1180,8 @@ a.table-list-element {
 table tbody tr:not(.title-row):not(.title-row.light) {
   &:hover {
     background-color: rgba(93, 229, 165, 0.1);
-    td:not(.datum-wide-cell):not(.datum-cell){
+
+    td:not(.datum-wide-cell):not(.datum-cell) {
       cursor: pointer;
     }
 
@@ -1136,10 +1189,11 @@ table tbody tr:not(.title-row):not(.title-row.light) {
     td.technical-title-cell {
       color: $primary-green;
     }
-    td.list-table-cell{
+
+    td.list-table-cell {
       // background-color: rgba(93, 229, 165, 0.5);
-     
-      a.table-list-element{
+
+      a.table-list-element {
         text-decoration: underline;
       }
     }
@@ -1244,9 +1298,9 @@ table.techniques-table {
 
 .database.techniques-table-wrapper {
   border: 0;
-  
 
-  @include media-breakpoint-up(xl){
+
+  @include media-breakpoint-up(xl) {
     margin-left: 12px;
   }
 
@@ -1285,11 +1339,12 @@ table.techniques-table {
     }
   }
 }
-.w-100-table{
+
+.w-100-table {
   @media screen and (max-width: 1484px) {
     width: calc(100% - 48px);
     margin: 0 24px;
-    
+
   }
 }
 

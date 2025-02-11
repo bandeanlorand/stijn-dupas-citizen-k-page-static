@@ -96,6 +96,10 @@
     width: 13.5px;
     height: 13.5px;
     background-size: 13.5px 13.5px;
+
+    &:focus{
+      box-shadow: none;
+    }
   }
 
   h2 {

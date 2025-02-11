@@ -148,14 +148,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const filterContainer = document.querySelector(".filter-nr-container");
 
   const togglePopup = () => {
-      popup.style.display = popup.style.display === "block" ? "none" : "block";
-      filterButtons.forEach(btn => btn.classList.remove("activeFilter"));
-      filterButtons[0].classList.add("activeFilter");
-      document.getElementById("bbtPopupCheckbox").style.display = "none";
+    if (popup) {
+      popup.classList.toggle("active"); // Toggle the popup active state
+      document.body.classList.toggle("popup-opened"); // Toggle class on body
+    }
+
+    filterButtons.forEach(btn => btn.classList.remove("activeFilter"));
+    filterButtons[0].classList.add("activeFilter");
+    document.getElementById("bbtPopupCheckbox").classList.remove("active");
   };
 
   const closePopup = () => {
-      popup.style.display = "none";
+    if (popup) {
+      popup.classList.remove("active");
+      document.body.classList.remove("popup-opened"); // Remove class from body
+    }
   };
 
   if (toggleButton) {
@@ -164,19 +171,22 @@ document.addEventListener("DOMContentLoaded", () => {
       togglePopup();
     });
 
-    closeButton.addEventListener("click", closePopup);
+    if (closeButton) {
+      closeButton.addEventListener("click", closePopup);
+    }
 
     document.addEventListener("click", (event) => {
-      if (!popup.contains(event.target) && event.target !== toggleButton) {
+      if (popup && !popup.contains(event.target) && event.target !== toggleButton) {
         closePopup();
       }
     });
-  };
+  }
+
   filterButtons.forEach(button => {
-      button.addEventListener("click", () => {
-          filterButtons.forEach(btn => btn.classList.remove("activeFilter"));
-          button.classList.add("activeFilter");
-      });
+    button.addEventListener("click", () => {
+      filterButtons.forEach(btn => btn.classList.remove("activeFilter"));
+      button.classList.add("activeFilter");
+    });
   });
 
   if (addFilterButton) {
@@ -202,13 +212,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const badge = document.createElement("div");
         badge.className = "badge";
         badge.innerHTML = `
-              ${filterLabel} effect op ${closestFilterTitle} ${filterText}
-              <span class="badge-close">&times;</span>
-          `;
+          ${filterLabel} effect op ${closestFilterTitle} ${filterText}
+          <span class="badge-close">&times;</span>
+        `;
 
-          if (filterContainer) {
-            filterContainer.appendChild(badge);
-          }
+        if (filterContainer) {
+          filterContainer.appendChild(badge);
+        }
+        
         closePopup();
 
         badge.querySelector(".badge-close").addEventListener("click", () => {
@@ -216,14 +227,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
     });
-  };
+  }
 
   dropdownItems.forEach(item => {
-      item.addEventListener("click", (event) => {
-          event.preventDefault();
-          dropdownItems.forEach(i => i.classList.remove("activeFilter"));
-          item.classList.add("activeFilter");
-      });
+    item.addEventListener("click", (event) => {
+      event.preventDefault();
+      dropdownItems.forEach(i => i.classList.remove("activeFilter"));
+      item.classList.add("activeFilter");
+    });
   });
 
   // Select the filter-buttons div
@@ -244,14 +255,11 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (button.dataset.filter === "negatief") {
           filterButtonsDiv.classList.add("third-btn-active");
         }
-        // Note: No action needed for the first button ("positief")
       });
     });
   }
 });
 
-
-/* script for the table filtering dropdown Aspect ends here */
 
 
 /* script to toggle content in the header starts here  */
@@ -286,36 +294,48 @@ document.addEventListener("DOMContentLoaded", () => {
   const addFilterButtonCheckbox = document.getElementById("addFilterButtonCheckbox");
   const filterContainer = document.querySelector(".filter-nr-container");
   const checkboxes = document.querySelectorAll(".form-check-input.popup-checkbox");
+  const aspectPopup = document.getElementById("aspectPopup");
 
   // Function to toggle the popup
   const togglePopup = () => {
-      popup.style.display = popup.style.display === "block" ? "none" : "block";
-      document.getElementById("aspectPopup").style.display = "none";
-      // Uncheck all checkboxes when the popup opens
-      checkboxes.forEach(checkbox => checkbox.checked = false);
+    if (popup) {
+      popup.classList.toggle("active"); // Toggle active class for the popup
+      document.body.classList.toggle("popup-opened"); // Toggle class on body
+    }
+    if (aspectPopup) {
+      aspectPopup.classList.remove("active"); // Ensure aspectPopup is closed
+    }
+
+    // Uncheck all checkboxes when the popup opens
+    checkboxes.forEach(checkbox => checkbox.checked = false);
   };
 
   // Function to close the popup
   const closePopup = () => {
-      popup.style.display = "none";
+    if (popup) {
+      popup.classList.remove("active");
+      document.body.classList.remove("popup-opened"); // Remove class from body
+    }
   };
 
   // Show/hide popup on button click
   if (toggleButton) {
     toggleButton.addEventListener("click", (event) => {
-        event.stopPropagation();
-        togglePopup();
+      event.stopPropagation();
+      togglePopup();
     });
-  };
+  }
 
   // Close popup on close button click
-  if (closeButton) { closeButton.addEventListener("click", closePopup); };
+  if (closeButton) {
+    closeButton.addEventListener("click", closePopup);
+  }
 
   // Close popup if clicked outside
   document.addEventListener("click", (event) => {
-      if (popup && !popup.contains(event.target) && event.target !== toggleButton) {
-          closePopup();
-      }
+    if (popup && !popup.contains(event.target) && event.target !== toggleButton) {
+      closePopup();
+    }
   });
 
   // Handle "Filter toevoegen" button click
@@ -329,9 +349,9 @@ document.addEventListener("DOMContentLoaded", () => {
           const badge = document.createElement("div");
           badge.className = "badge";
           badge.innerHTML = `
-                  BBT: ${label}
-                  <span class="badge-close">&times;</span>
-              `;
+            BBT: ${label}
+            <span class="badge-close">&times;</span>
+          `;
           filterContainer.appendChild(badge);
 
           // Add event listener to remove badge on "x" click
@@ -344,8 +364,9 @@ document.addEventListener("DOMContentLoaded", () => {
       // Close popup
       closePopup();
     });
-  };
+  }
 });
+
 /* script for the table filtering dropdown BBT ends here */
 
 
