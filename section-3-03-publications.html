@@ -55,9 +55,10 @@
         <div class="col-12 col-lg-3">
           <div class="offcanvas offcanvas-start filter-block-canvas" tabindex="-1" id="showFiltersMobile"
             aria-labelledby="offcanvasFilterBlock">
-            <button type="button" class="btn-close btn-reset-canvas" data-bs-dismiss="offcanvas"
+            <div class="position-fixed top-0 bg-white close-btn-wrapper">
+              <button type="button" class="btn-close btn-reset-canvas" data-bs-dismiss="offcanvas"
               aria-label="Close"></button>
-
+            </div>
             <div class="filter-block search filter-top">
               <div class="filter-block-list" style="max-height: 1000px;">
                 <div class="input-group">
@@ -168,13 +169,13 @@
                   <input class="form-check-input" type="checkbox" value="" id="sector15">
                   <label class="form-check-label" for="sector15">Overige <sup>(12)</sup></label>
                 </div>
-
+                
               </div>
+              <!-- search button that closes the modal/slide in on mobile - starts here -->
+              <button type="button" class="btn btn-apply-filter-close mb-0" data-bs-dismiss="offcanvas" aria-label="Close">Filter toevoegen</button>
+              <!-- search button that closes the modal/slide in on mobile - ends here -->
             </div>
             <!-- table filter group - first group -  ends here  -->
-
-
-
           </div>
         </div>
         <div class="col-12 col-xl-9">

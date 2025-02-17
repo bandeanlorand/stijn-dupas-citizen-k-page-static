@@ -9865,7 +9865,7 @@ nav.techniques-table + .table-filtering {
 
 /* filter block for databse table checkbox starts here */
 .filter-block {
-  margin-bottom: 24px;
+  margin-bottom: 12px;
 }
 .filter-block h3.filter-block-title {
   font-family: "Work Sans";
@@ -10354,6 +10354,7 @@ a.table-list-element {
   margin-left: 28px;
   display: block;
   margin-bottom: 8px;
+  text-decoration: underline;
 }
 a.table-list-element:last-child {
   margin-bottom: 0;
@@ -10517,6 +10518,14 @@ a.table-list-element:hover a {
   height: 100%;
   --bs-offcanvas-width: 428px !important;
 }
+.offcanvas.offcanvas-start.filter-block-canvas .close-btn-wrapper {
+  --bs-offcanvas-width: 428px !important;
+  height: 48px;
+  width: 100%;
+  max-width: 410px;
+  left: 0;
+  z-index: 2;
+}
 @media (min-width: 1200px) {
   .offcanvas.offcanvas-start.filter-block-canvas {
     padding: 0px 35px 24px 0px;
@@ -10536,7 +10545,7 @@ a.table-list-element:hover a {
   }
 }
 .offcanvas.offcanvas-start.filter-block-canvas .btn-close {
-  right: 45px;
+  right: 38px;
   position: absolute;
   color: #2E3333;
   opacity: 0.9;
@@ -10544,6 +10553,7 @@ a.table-list-element:hover a {
   height: 13.5px;
   background-size: 13.5px 13.5px;
   top: 10px;
+  z-index: 3;
 }
 .offcanvas.offcanvas-start.filter-block-canvas .btn-close:focus {
   box-shadow: none;
@@ -10630,6 +10640,9 @@ a.table-list-element:hover a {
 .filter-block.search.active .input-group {
   border: 5.5px solid rgba(93, 229, 165, 0.2);
   border-radius: 8px;
+}
+.filter-block.search.filter-top {
+  padding-top: 12px;
 }
 
 .filter-block-list {
@@ -10764,10 +10777,6 @@ table tbody tr:not(.title-row):not(.title-row.light):hover td.text-left,
 table tbody tr:not(.title-row):not(.title-row.light):hover td.technical-title-cell {
   color: #237B6C;
 }
-table tbody tr:not(.title-row):not(.title-row.light):hover td.list-table-cell a.table-list-element {
-  text-decoration: underline;
-}
-
 table.techniques-table {
   background: #fbf9fa;
   min-width: 768px;
@@ -10894,6 +10903,26 @@ table.techniques-table tr.border-bottom {
 }
 
 /* section 3 ongoing table - ends here */
+.btn-apply-filter-close {
+  padding: 16px 16px;
+  background: #237B6C;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  text-align: center;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+  width: 100%;
+}
+.btn-apply-filter-close:hover {
+  color: #FFFFFF;
+  background-color: #165046;
+}
+
 /* download section styles starts here */
 .downloads,
 .links-tools {
@@ -12003,6 +12032,14 @@ ul.link-block a::after {
   height: 100%;
   --bs-offcanvas-width: 428px !important;
 }
+.offcanvas.offcanvas-start.article-menu-canvas .close-btn-wrapper {
+  --bs-offcanvas-width: 428px !important;
+  height: 48px;
+  width: 100%;
+  max-width: 410px;
+  left: 0;
+  z-index: 2;
+}
 @media (min-width: 1200px) {
   .offcanvas.offcanvas-start.article-menu-canvas {
     padding: 0px 35px 24px 0px;
@@ -12024,7 +12061,7 @@ ul.link-block a::after {
 }
 .offcanvas.offcanvas-start.article-menu-canvas .btn-close {
   top: 15px;
-  right: 43px;
+  right: 38px;
   z-index: 100;
   position: absolute;
   color: #2E3333;
@@ -12032,6 +12069,7 @@ ul.link-block a::after {
   width: 13.5px;
   height: 13.5px;
   background-size: 13.5px 13.5px;
+  z-index: 3;
 }
 .offcanvas.offcanvas-start.article-menu-canvas .btn-close:focus {
   box-shadow: none;

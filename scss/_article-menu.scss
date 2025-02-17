@@ -21,9 +21,9 @@
   max-width: 380px;
   text-align: left;
   white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    
+  overflow: hidden;
+  text-overflow: ellipsis;
+
 
   @include media-breakpoint-up(xl) {
     display: none;
@@ -46,10 +46,10 @@
     display: block;
     background-color: #fff;
     display: inline-flex;
-      position: relative;
-      float:left;
-      margin-right: 5px;
-      margin-top: -1px;
+    position: relative;
+    float: left;
+    margin-right: 5px;
+    margin-top: -1px;
   }
 
   @include media-breakpoint-up(xl) {
@@ -63,6 +63,14 @@
   height: 100%;
   --bs-offcanvas-width: 428px !important;
 
+  .close-btn-wrapper {
+    --bs-offcanvas-width: 428px !important;
+    height: 48px;
+    width: 100%;
+    max-width: 410px;
+    left: 0;
+    z-index: 2;
+  }
 
   @include media-breakpoint-up(xl) {
     padding: 0px 35px 24px 0px;
@@ -75,8 +83,6 @@
     transition: none;
     padding: 48px 35px 24px 36px;
 
-
-
     +.offcanvas-backdrop.fade {
       display: none;
     }
@@ -88,7 +94,7 @@
 
   .btn-close {
     top: 15px;
-    right: 43px;
+    right: 38px;
     z-index: 100;
     position: absolute;
     color: #2E3333;
@@ -96,8 +102,9 @@
     width: 13.5px;
     height: 13.5px;
     background-size: 13.5px 13.5px;
+    z-index: 3;
 
-    &:focus{
+    &:focus {
       box-shadow: none;
     }
   }
