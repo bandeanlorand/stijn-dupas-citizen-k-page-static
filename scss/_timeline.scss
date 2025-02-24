@@ -8,22 +8,13 @@
     background-size: auto 100%;
 
     h3 {
-        font-family: 'Yantramanav';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 31px;
         display: flex;
         align-items: center;
         color: #FFFFFF;
+        padding-bottom: 8px;
     }
 
     p {
-        font-family: 'Work Sans', serif;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 28px;
         display: flex;
         align-items: center;
         color: #FFFFFF;
@@ -37,8 +28,8 @@
         font-family: 'Work Sans';
         font-style: normal;
         font-weight: 600;
-        font-size: 14px;
-        line-height: 14px;
+       font-size: 0.875rem;
+        line-height: 0.875rem;
         color: #1C4039;
 
         &:hover {

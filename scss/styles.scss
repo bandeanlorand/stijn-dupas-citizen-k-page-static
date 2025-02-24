@@ -28,6 +28,7 @@ html {
   display: flex;
   flex-direction: column;
   height: 100%;
+  font-size: 16px; // 1rem = 16px - base size;
 }
 
 // Toggle global options
@@ -147,8 +148,84 @@ main.container {
   flex-direction: column;
 }
 
-@media (min-width: 1440px) {
+/* Typography - font sizes - starts here */
+h1.h3 {color: $header-title-color;
+  font-family: "Yantramanav", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 2.9375rem;
+  padding: 0px 0;
+  margin-bottom: 8px;
+  word-break: break-all;
 
+  @include media-breakpoint-up(md){
+    word-break: normal;
+  }
+}
+h2 {
+  font-family: "Yantramanav", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.875rem;
+  line-height: 2.4375rem;
+  color: $primary;
+}
+#h2h3 {
+  // this specific style is used at h2 element that has to look as h3 element
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.9375rem;
+  color: $primary;
+}
+h3 {
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.9375rem;
+  color: $primary;
+}
+h4 {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: $primary;
+}
+#h3h4 {
+  // this specific style is used at h3 element that has to look as h4 element
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: $primary;
+}
+p{
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  color: $primary;
+}
+
+h6 {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: $primary;
+}
+
+/* Typography - font sizes - ends here */
+
+@media (min-width: 1440px) {
   .container {
     max-width: 1440px;
     /* Custom width for screens 1440px and above */

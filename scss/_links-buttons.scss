@@ -4,11 +4,8 @@
     margin-bottom: 40px;
 
     h2 {
-        font-family: 'Yantramanav';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 31px;
+        @extend #h2h3;
+        line-height: 1.9375rem;
         display: flex;
         align-items: center;
         color: $primary;
@@ -93,8 +90,8 @@
         font-family: 'Work Sans';
         font-style: normal;
         font-weight: 600;
-        font-size: 14px;
-        line-height: 14px;
+       font-size: 0.875rem;
+        line-height: 0.875rem;
         color: #FFFFFF;
 
         &:before {
@@ -123,8 +120,8 @@
             font-family: 'Work Sans';
             font-style: normal;
             font-weight: 600;
-            font-size: 18px;
-            line-height: 28px;
+            font-size: 1.125rem;
+            line-height: 1.75rem;
             display: flex;
             align-items: flex-start;
             text-align: center;
@@ -144,8 +141,8 @@
             font-family: 'Work Sans';
             font-style: normal;
             font-weight: 600;
-            font-size: 14px;
-            line-height: 20px;
+           font-size: 0.875rem;
+            line-height: 1.25rem;
             padding: 0 0 0 0;
             min-width: 105px;
 
@@ -161,8 +158,8 @@
         font-family: 'Work Sans';
         font-style: normal;
         font-weight: 400;
-        font-size: 14px;
-        line-height: 20px;
+       font-size: 0.875rem;
+        line-height: 1.25rem;
         color: $primary;
     }
 }
@@ -180,7 +177,7 @@ ul.external-links {
 
     li {
         position: relative;
-        line-height: 28px;
+        line-height: 1.75rem;
         list-style: none;
         margin-bottom: 16px;
         border-bottom: 1px solid $primary;
@@ -204,8 +201,8 @@ ul.external-links {
             font-family: 'Work Sans';
             font-style: normal;
             font-weight: 400;
-            font-size: 16px;
-            line-height: 28px;
+            font-size: 1rem;
+            line-height: 1.75rem;
             color: $primary;
             text-decoration: none;
             padding: 0;
@@ -245,8 +242,8 @@ ul.external-tools {
         font-family: 'Work Sans';
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
-        line-height: 28px;
+        font-size: 1rem;
+        line-height: 1.75rem;
         color: $primary;
         text-decoration: none;
         width: 100%;
@@ -278,8 +275,8 @@ ul.external-tools {
             font-family: 'Work Sans';
             font-style: normal;
             font-weight: 400;
-            font-size: 14px;
-            line-height: 20px;
+           font-size: 0.875rem;
+            line-height: 1.25rem;
             color: $primary;
             display: block;
         }
@@ -388,20 +385,14 @@ a {
                 font-family: 'Work Sans';
                 font-style: normal;
                 font-weight: 600;
-                font-size: 14px;
-                line-height: 20px;
+               font-size: 0.875rem;
+                line-height: 1.25rem;
                 color: #FFFFFF;
                 margin-bottom: 6px;
                 display: inline-block;
             }
 
             p {
-                font-family: 'Work Sans';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 28px;
-                color: $primary;
                 margin-bottom: 0;
             }
 
@@ -410,8 +401,8 @@ a {
                 font-family: 'Work Sans';
                 font-style: normal;
                 font-weight: 600;
-                font-size: 14px;
-                line-height: 14px;
+               font-size: 0.875rem;
+                line-height: 0.875rem;
                 color: $primary-green;
                 text-decoration: none;
                 background-image: url('data:image/svg+xml,<svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.23239 0.815641C7.40324 0.644786 7.68025 0.644786 7.85111 0.815641L12.2261 5.19064C12.3082 5.27269 12.3542 5.38397 12.3542 5.5C12.3542 5.61603 12.3082 5.72731 12.2261 5.80936L7.85111 10.1844C7.68025 10.3552 7.40324 10.3552 7.23239 10.1844C7.06153 10.0135 7.06153 9.7365 7.23239 9.56564L10.8605 5.9375H1.41675C1.17512 5.9375 0.979248 5.74162 0.979248 5.5C0.979248 5.25838 1.17512 5.0625 1.41675 5.0625H10.8605L7.23239 1.43436C7.06153 1.2635 7.06153 0.986495 7.23239 0.815641Z" fill="%23237B6C"/></svg>');
@@ -437,8 +428,8 @@ a {
     font-family: 'Work Sans';
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
-    line-height: 14px;
+   font-size: 0.875rem;
+    line-height: 0.875rem;
     color: #1C4039;
     margin-top: 8px;
 

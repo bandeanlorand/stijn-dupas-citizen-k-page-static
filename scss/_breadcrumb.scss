@@ -12,7 +12,7 @@ nav ol.breadcrumb {
   list-style: none;
   text-decoration: none;
 
-  line-height: 20px;
+  line-height: 1.25rem;
   padding: 16px 20px;
   background-color: #fff;
   gap: 0 8px;
@@ -23,8 +23,8 @@ nav ol.breadcrumb {
   align-items: center;
 
   li.breadcrumb-item {
-    font-size: 14px;
-    line-height: 20px;
+   font-size: 0.875rem;
+    line-height: 1.25rem;
     padding: 8px 0 8px 0;
     position: relative;
     white-space: nowrap;

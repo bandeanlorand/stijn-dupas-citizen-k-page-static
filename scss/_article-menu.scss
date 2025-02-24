@@ -4,8 +4,8 @@
   font-family: 'Work Sans';
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
   display: inline-block;
   flex-direction: row;
   justify-content: flex-start;
@@ -110,13 +110,6 @@
   }
 
   h2 {
-    height: 31px;
-    font-family: 'Yantramanav';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 31px;
-    color: $primary;
     text-align: left;
     margin-bottom: 10px;
     padding-bottom: 0;

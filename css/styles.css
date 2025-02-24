@@ -4,6 +4,7 @@ html {
   display: flex;
   flex-direction: column;
   height: 100%;
+  font-size: 16px;
 }
 
 :root,
@@ -8947,6 +8948,89 @@ main.container {
   flex-direction: column;
 }
 
+/* Typography - font sizes - starts here */
+h1.h3 {
+  color: #237B6C;
+  font-family: "Yantramanav", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.25rem;
+  line-height: 2.9375rem;
+  padding: 0px 0;
+  margin-bottom: 8px;
+  word-break: break-all;
+}
+@media (min-width: 768px) {
+  h1.h3 {
+    word-break: normal;
+  }
+}
+
+h2 {
+  font-family: "Yantramanav", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.875rem;
+  line-height: 2.4375rem;
+  color: rgb(46, 51, 51);
+}
+
+#h2h3, .downloads h2,
+.links-tools h2, .offcanvas.offcanvas-start.filter-block-canvas h2 {
+  font-family: "Yantramanav";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.9375rem;
+  color: rgb(46, 51, 51);
+}
+
+h3 {
+  font-family: "Yantramanav";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.9375rem;
+  color: rgb(46, 51, 51);
+}
+
+h4 {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: rgb(46, 51, 51);
+}
+
+#h3h4, .content-card-figure h3 {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: rgb(46, 51, 51);
+}
+
+p {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  color: rgb(46, 51, 51);
+}
+
+h6 {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: rgb(46, 51, 51);
+}
+
+/* Typography - font sizes - ends here */
 @media (min-width: 1440px) {
   .container {
     max-width: 1440px;
@@ -9002,12 +9086,6 @@ main.container {
   }
 }
 .content h2 {
-  font-family: "Yantramanav", serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 39px;
-  color: rgb(46, 51, 51);
   padding-bottom: 16px;
   margin: 0;
 }
@@ -9015,22 +9093,9 @@ main.container {
   margin-top: 16px;
 }
 .content h3 {
-  font-family: "Yantramanav", serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 31px;
-  color: rgb(46, 51, 51);
   padding-bottom: 16px;
   margin: 0;
   display: inline-flex;
-}
-.content p {
-  font-family: "Work Sans", serif;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 28px;
-  color: rgb(46, 51, 51);
 }
 .content p a {
   color: #237B6C;
@@ -9062,14 +9127,6 @@ main.container {
 .content article + .ongoing-table-wrapper {
   margin-top: 32px;
 }
-.content aside h3 {
-  font-family: "Yantramanav", serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 31px;
-  color: rgb(46, 51, 51);
-}
 .content.pb-5 {
   padding-bottom: 56px !important;
 }
@@ -9082,7 +9139,7 @@ main.container {
   font-family: "Work Sans";
   font-style: italic;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 16px;
   color: rgb(46, 51, 51);
   padding-bottom: 16px;
@@ -9106,8 +9163,8 @@ main.container {
   font-family: "Yantramanav";
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 31px;
+  font-size: 1.5rem;
+  line-height: 1.9375rem;
   margin-left: 10px;
 }
 .link-menu h4 a {
@@ -9134,8 +9191,8 @@ main.container {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 1rem;
+  line-height: 1.75rem;
   text-decoration: none;
   color: rgb(46, 51, 51);
   display: flex;
@@ -9239,40 +9296,16 @@ main.container {
   opacity: 1;
 }
 .content-nested-dropdown h2 {
-  font-family: "Yantramanav";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 39px;
-  color: rgb(46, 51, 51);
   margin-bottom: 24px;
 }
 .content-nested-dropdown h3 {
-  font-family: "Yantramanav";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 31px;
-  color: rgb(46, 51, 51);
   margin-bottom: 24px;
 }
 .content-nested-dropdown h4 {
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 28px;
-  color: rgb(46, 51, 51);
   flex-grow: 1;
   margin-bottom: 16px;
 }
 .content-nested-dropdown P {
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  color: rgb(46, 51, 51);
   margin-bottom: 24px;
 }
 
@@ -9297,8 +9330,8 @@ main.container {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
   color: #237B6C;
   padding: 10px 0;
 }
@@ -9336,7 +9369,7 @@ main.container {
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 iframe {
@@ -9362,7 +9395,7 @@ nav ol.breadcrumb {
   font-size: var(--bs-breadcrumb-font-size);
   list-style: none;
   text-decoration: none;
-  line-height: 20px;
+  line-height: 1.25rem;
   padding: 16px 20px;
   background-color: #fff;
   gap: 0 8px;
@@ -9373,8 +9406,8 @@ nav ol.breadcrumb {
   align-items: center;
 }
 nav ol.breadcrumb li.breadcrumb-item {
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   padding: 8px 0 8px 0;
   position: relative;
   white-space: nowrap;
@@ -9464,41 +9497,20 @@ header {
     box-shadow: 24px 0px 0px #cdefe1;
   }
 }
-header h1.h3 {
-  color: #237B6C;
-  font-family: "Yantramanav", serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 47px;
-  padding: 0px 0;
-  margin-bottom: 8px;
-  word-break: break-all;
-}
-@media (min-width: 768px) {
-  header h1.h3 {
-    word-break: normal;
-  }
-}
 header ul {
   font-family: "Work Sans";
   color: rgb(46, 51, 51);
   padding-left: 20px;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 header p {
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  color: rgb(46, 51, 51);
+  font-size: 1.125rem;
 }
 header p b {
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   font-style: normal;
 }
 header p a {
@@ -9518,8 +9530,8 @@ header.no-breadcrumb {
   font-family: "Work Sans", serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
   color: #237B6C;
   background-color: none;
   background: none;
@@ -9552,8 +9564,8 @@ header.no-breadcrumb {
   font-family: "Work Sans", serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 1rem;
+  line-height: 1.75rem;
   padding: 10px 12px;
   margin-bottom: 0;
   transition: all ease 0.2s;
@@ -9561,7 +9573,7 @@ header.no-breadcrumb {
 @media (min-width: 768px) {
   .nav-tabs .nav-link {
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 }
 .nav-tabs .nav-link.active {
@@ -9599,8 +9611,8 @@ header.no-breadcrumb {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   align-items: center;
   color: #7A7A7A;
   border-radius: 50%;
@@ -9651,8 +9663,8 @@ header.no-breadcrumb {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   align-items: center;
   color: #7A7A7A;
   border-radius: 50%;
@@ -9713,8 +9725,8 @@ nav.techniques-table button {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
   color: rgb(46, 51, 51);
   border: none;
   margin: 0 8px 0 0;
@@ -9738,7 +9750,7 @@ nav.techniques-table + .table-filtering {
 }
 
 .icon {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #007bff;
 }
 
@@ -9770,8 +9782,8 @@ nav.techniques-table + .table-filtering {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 1rem;
+  line-height: 1.75rem;
   text-align: right;
   color: rgb(46, 51, 51);
 }
@@ -9787,8 +9799,8 @@ nav.techniques-table + .table-filtering {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   align-items: center;
   text-align: center;
   color: rgb(46, 51, 51);
@@ -9798,8 +9810,8 @@ nav.techniques-table + .table-filtering {
 .filter-nr {
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
   text-align: center;
   text-decoration: underline;
   color: #237B6C;
@@ -9821,8 +9833,8 @@ nav.techniques-table + .table-filtering {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
   text-align: center;
   color: #FFFFFF;
   display: flex;
@@ -9856,8 +9868,8 @@ nav.techniques-table + .table-filtering {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   text-align: center;
   color: rgb(46, 51, 51);
   padding-right: 12px;
@@ -9871,8 +9883,8 @@ nav.techniques-table + .table-filtering {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 1rem;
+  line-height: 1.75rem;
   color: rgb(46, 51, 51);
   display: flex;
   flex-direction: row;
@@ -9906,7 +9918,7 @@ nav.techniques-table + .table-filtering {
   padding-bottom: 0;
 }
 .filter-block .form-check {
-  line-height: 24px;
+  line-height: 1.5rem;
   margin-bottom: 12px;
   display: flex;
   flex-direction: row;
@@ -9918,8 +9930,8 @@ nav.techniques-table + .table-filtering {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
   padding-top: 0px;
   padding-bottom: 0px;
   color: rgb(46, 51, 51);
@@ -9954,8 +9966,8 @@ nav.techniques-table + .table-filtering {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   color: rgb(46, 51, 51);
   padding-left: 32px;
   position: relative;
@@ -10056,16 +10068,8 @@ nav.techniques-table + .table-filtering {
   align-items: center;
   margin-bottom: 10px;
 }
-.custom-popup .custom-popup-header h6 {
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 28px;
-  color: rgb(46, 51, 51);
-}
 .custom-popup .custom-popup-header .btn-close {
-  font-size: 12px;
+  font-size: 0.75rem;
   padding: 5px;
 }
 .custom-popup .custom-popup-header .btn-close:focus {
@@ -10076,8 +10080,8 @@ nav.techniques-table + .table-filtering {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
   color: #FFFFFF;
   display: flex;
   flex-direction: row;
@@ -10097,8 +10101,8 @@ nav.techniques-table + .table-filtering {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   display: flex;
   align-items: center;
   color: rgb(46, 51, 51);
@@ -10115,8 +10119,8 @@ nav.techniques-table + .table-filtering {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
   padding: 8px 4px;
   color: #939393;
 }
@@ -10125,8 +10129,8 @@ nav.techniques-table + .table-filtering {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
   color: #202124;
   cursor: pointer;
 }
@@ -10194,8 +10198,8 @@ nav.techniques-table + .table-filtering {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   text-align: center;
   color: rgb(46, 51, 51);
   border-radius: 30.4px;
@@ -10236,8 +10240,8 @@ nav.techniques-table + .table-filtering {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   color: #2E3333;
   white-space: nowrap;
   overflow: hidden;
@@ -10286,8 +10290,8 @@ nav.techniques-table + .table-filtering {
   padding-right: 8px;
   font-family: "Work Sans";
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   color: #7A7A7A;
 }
 
@@ -10336,8 +10340,8 @@ td.list-table-cell {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   color: #000000;
   margin-bottom: 8px;
 }
@@ -10347,8 +10351,8 @@ a.table-list-element {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   text-decoration: none;
   color: rgb(46, 51, 51);
   margin-left: 28px;
@@ -10375,8 +10379,8 @@ a.table-list-element a {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 1rem;
+  line-height: 1.75rem;
   color: rgb(46, 51, 51);
   text-decoration: none;
   padding: 0;
@@ -10406,8 +10410,8 @@ a.table-list-element:hover a {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   color: #1C4039;
 }
 .technique-type-icon.light-green {
@@ -10440,8 +10444,8 @@ a.table-list-element:hover a {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   color: rgb(46, 51, 51);
   padding: 10px 8px;
 }
@@ -10455,8 +10459,8 @@ a.table-list-element:hover a {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   color: rgb(46, 51, 51);
   text-align: left;
   padding: 12px 8px;
@@ -10467,8 +10471,8 @@ a.table-list-element:hover a {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   display: inline-block;
   color: #7A7A7A;
   background-repeat: no-repeat;
@@ -10485,8 +10489,8 @@ a.table-list-element:hover a {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -10559,13 +10563,6 @@ a.table-list-element:hover a {
   box-shadow: none;
 }
 .offcanvas.offcanvas-start.filter-block-canvas h2 {
-  height: 31px;
-  font-family: "Yantramanav";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 31px;
-  color: rgb(46, 51, 51);
   text-align: left;
   margin-bottom: 10px;
   padding-bottom: 0;
@@ -10685,8 +10682,8 @@ a.table-list-element:hover a {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   color: rgb(46, 51, 51);
   border-radius: 4px;
 }
@@ -10713,14 +10710,14 @@ a.table-list-element:hover a {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   color: #1C4039;
 }
 .searched-element button {
   background: none;
   border: none;
-  font-size: 16px;
+  font-size: 1rem;
   width: 16px;
   height: 16px;
   border-radius: 8px;
@@ -10791,8 +10788,8 @@ table.techniques-table .text-left {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
   color: rgb(46, 51, 51);
   padding: 4px 4px 4px 8px;
 }
@@ -10807,7 +10804,7 @@ table.techniques-table .btn-3 {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 15px;
   text-align: center;
   color: rgb(46, 51, 51);
@@ -10844,7 +10841,7 @@ table.techniques-table .title-row {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 16px;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -10912,8 +10909,8 @@ table.techniques-table tr.border-bottom {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
   color: #FFFFFF;
   margin-bottom: 12px;
   width: 100%;
@@ -10930,11 +10927,7 @@ table.techniques-table tr.border-bottom {
 }
 .downloads h2,
 .links-tools h2 {
-  font-family: "Yantramanav";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 31px;
+  line-height: 1.9375rem;
   display: flex;
   align-items: center;
   color: rgb(46, 51, 51);
@@ -11011,8 +11004,8 @@ table.techniques-table tr.border-bottom {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
   color: #FFFFFF;
 }
 .download-element button:before {
@@ -11038,8 +11031,8 @@ table.techniques-table tr.border-bottom {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   display: flex;
   align-items: flex-start;
   text-align: center;
@@ -11058,8 +11051,8 @@ table.techniques-table tr.border-bottom {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   padding: 0 0 0 0;
   min-width: 105px;
 }
@@ -11073,8 +11066,8 @@ table.techniques-table tr.border-bottom {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   color: rgb(46, 51, 51);
 }
 
@@ -11092,7 +11085,7 @@ ul.external-links {
 }
 ul.external-links li {
   position: relative;
-  line-height: 28px;
+  line-height: 1.75rem;
   list-style: none;
   margin-bottom: 16px;
   border-bottom: 1px solid rgb(46, 51, 51);
@@ -11114,8 +11107,8 @@ ul.external-links li a {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 1rem;
+  line-height: 1.75rem;
   color: rgb(46, 51, 51);
   text-decoration: none;
   padding: 0;
@@ -11146,8 +11139,8 @@ ul.external-tools a {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 1rem;
+  line-height: 1.75rem;
   color: rgb(46, 51, 51);
   text-decoration: none;
   width: 100%;
@@ -11175,8 +11168,8 @@ ul.external-tools a span {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   color: rgb(46, 51, 51);
   display: block;
 }
@@ -11275,19 +11268,13 @@ a.icon-document-check::before {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   color: #FFFFFF;
   margin-bottom: 6px;
   display: inline-block;
 }
 .related-news a article p {
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  color: rgb(46, 51, 51);
   margin-bottom: 0;
 }
 .related-news a article .read-more {
@@ -11295,8 +11282,8 @@ a.icon-document-check::before {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
   color: #237B6C;
   text-decoration: none;
   background-image: url('data:image/svg+xml,<svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.23239 0.815641C7.40324 0.644786 7.68025 0.644786 7.85111 0.815641L12.2261 5.19064C12.3082 5.27269 12.3542 5.38397 12.3542 5.5C12.3542 5.61603 12.3082 5.72731 12.2261 5.80936L7.85111 10.1844C7.68025 10.3552 7.40324 10.3552 7.23239 10.1844C7.06153 10.0135 7.06153 9.7365 7.23239 9.56564L10.8605 5.9375H1.41675C1.17512 5.9375 0.979248 5.74162 0.979248 5.5C0.979248 5.25838 1.17512 5.0625 1.41675 5.0625H10.8605L7.23239 1.43436C7.06153 1.2635 7.06153 0.986495 7.23239 0.815641Z" fill="%23237B6C"/></svg>');
@@ -11316,8 +11303,8 @@ a.icon-document-check::before {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
   color: #1C4039;
   margin-top: 8px;
 }
@@ -11363,8 +11350,8 @@ a.icon-document-check::before {
   font-family: "Yantramanav", serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 30px;
-  line-height: 39px;
+  font-size: 1.875rem;
+  line-height: 2.4375rem;
   display: flex;
   align-items: center;
   color: #000000;
@@ -11378,8 +11365,8 @@ a.icon-document-check::before {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   display: flex;
   align-items: center;
   color: rgb(46, 51, 51);
@@ -11392,7 +11379,7 @@ a.icon-document-check::before {
   padding: 11px 16px;
   gap: 8px;
   min-height: 32px;
-  line-height: 24px;
+  line-height: 1.5rem;
   border: 1px solid #c4ccca;
   background: #FFFFFF;
   border-radius: 8px;
@@ -11409,8 +11396,8 @@ a.icon-document-check::before {
   font-family: "Work Sans", serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
   padding: 17px 16px;
   margin-bottom: 0;
   transition: all ease 0.2s;
@@ -11423,8 +11410,8 @@ a.icon-document-check::before {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   color: #000000;
   padding: 24px 24px 24px 0px;
   margin-bottom: 0;
@@ -11452,8 +11439,8 @@ ul.link-block a {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 1rem;
+  line-height: 1.75rem;
   color: #1C4039;
   text-decoration: none;
   width: 100%;
@@ -11513,21 +11500,12 @@ ul.link-block a::after {
   background-size: auto 100%;
 }
 .timeline-block h3 {
-  font-family: "Yantramanav";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 31px;
   display: flex;
   align-items: center;
   color: #FFFFFF;
+  padding-bottom: 8px;
 }
 .timeline-block p {
-  font-family: "Work Sans", serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
   display: flex;
   align-items: center;
   color: #FFFFFF;
@@ -11540,8 +11518,8 @@ ul.link-block a::after {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
   color: #1C4039;
 }
 .timeline-block button:hover {
@@ -11579,17 +11557,11 @@ ul.link-block a::after {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   color: rgb(46, 51, 51);
 }
 .content-card p {
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  color: rgb(46, 51, 51);
   margin-bottom: 0;
 }
 .content-card:last-of-type {
@@ -11639,28 +11611,16 @@ ul.link-block a::after {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 28px;
-  color: rgb(46, 51, 51);
 }
 .content-card-figure p {
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  color: rgb(46, 51, 51);
   margin-bottom: 8px;
 }
 .content-card-figure button.btn.btn-arrow {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
   display: flex;
   align-items: center;
   text-align: center;
@@ -11733,8 +11693,8 @@ ul.link-block a::after {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
+  font-size: 1rem;
+  line-height: 1.75rem;
   text-decoration: none;
   color: rgb(46, 51, 51);
   display: flex;
@@ -11791,41 +11751,17 @@ ul.link-block a::after {
   opacity: 1;
 }
 .content-dropdown h2 {
-  font-family: "Yantramanav";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 39px;
-  color: rgb(46, 51, 51);
   margin-bottom: 16px;
   padding-bottom: 0;
 }
 .content-dropdown h3 {
-  font-family: "Yantramanav";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 31px;
-  color: rgb(46, 51, 51);
   margin-bottom: 24px;
 }
 .content-dropdown h4 {
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 28px;
-  color: rgb(46, 51, 51);
   flex-grow: 1;
   margin-bottom: 16px;
 }
 .content-dropdown P {
-  font-family: "Work Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  color: rgb(46, 51, 51);
   margin-bottom: 24px;
 }
 .content-dropdown P + ul {
@@ -11854,7 +11790,7 @@ ul.link-block a::after {
   content: "·";
   font-size: 40px;
   vertical-align: middle;
-  line-height: 20px;
+  line-height: 1.25rem;
   position: absolute;
   left: -18px;
   top: -2px;
@@ -11970,8 +11906,8 @@ ul.link-block a::after {
   font-family: "Work Sans";
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
   display: inline-block;
   flex-direction: row;
   justify-content: flex-start;
@@ -12075,13 +12011,6 @@ ul.link-block a::after {
   box-shadow: none;
 }
 .offcanvas.offcanvas-start.article-menu-canvas h2 {
-  height: 31px;
-  font-family: "Yantramanav";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 31px;
-  color: rgb(46, 51, 51);
   text-align: left;
   margin-bottom: 10px;
   padding-bottom: 0;

@@ -25,43 +25,22 @@ header {
       }
     }
   }
-  
-  h1.h3 {
-    color: $header-title-color;
-    font-family: "Yantramanav", serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 47px;
-    padding: 0px 0;
-    margin-bottom: 8px;
-    word-break: break-all;
 
-    @include media-breakpoint-up(md){
-      word-break: normal;
-    }
-  }
 
   ul {
     font-family: 'Work Sans';
     color: $primary;
     padding-left: 20px;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   p {
-    font-family: 'Work Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-    color: $primary;
-
+    font-size: 1.125rem;
     b {
-      font-size: 18px;
-      line-height: 28px;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
       font-style: normal;
     }
 
@@ -85,8 +64,8 @@ header {
   font-family: "Work Sans", serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 14px;
+ font-size: 0.875rem;
+  line-height: 0.875rem;
   color: $primary-green;
   background-color: none;
   background: none;

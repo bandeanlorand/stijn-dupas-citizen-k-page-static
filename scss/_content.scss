@@ -44,7 +44,6 @@
 }
 
 .content {
- 
   padding: 24px 24px;
 
   @include media-breakpoint-up(md){
@@ -53,12 +52,6 @@
   }
 
   h2 {
-    font-family: "Yantramanav", serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 39px;
-    color: $primary;
     padding-bottom: 16px;
     margin: 0;
 
@@ -68,25 +61,12 @@
   }
 
   h3 {
-    font-family: "Yantramanav", serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 31px;
-    color: $primary;
     padding-bottom: 16px;
     margin: 0;
     display: inline-flex;
-
   }
 
   p {
-    font-family: "Work Sans", serif;
-    font-style: normal;
-    font-size: 16px;
-    line-height: 28px;
-    color: $primary;
-
     a {
       color: $primary-green;
       font-weight: 600;
@@ -129,17 +109,7 @@
     }
   }
 
-  aside {
-    h3 {
-      font-family: "Yantramanav", serif;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 24px;
-      line-height: 31px;
-      color: $primary;
 
-    }
-  }
   &.pb-5{
     padding-bottom: 56px !important;
   }
@@ -155,7 +125,7 @@
       font-family: 'Work Sans';
       font-style: italic;
       font-weight: 400;
-      font-size: 12px;
+      font-size: 0.75rem;
       line-height: 16px;
       color: $primary;
       padding-bottom: 16px;
@@ -184,9 +154,10 @@
     font-family: 'Yantramanav';
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
-    line-height: 31px;
+    font-size: 1.5rem;
+    line-height: 1.9375rem;
     margin-left: 10px;
+    
 
     a {
       text-decoration: none;
@@ -219,8 +190,8 @@
       font-family: 'Work Sans';
       font-style: normal;
       font-weight: 400;
-      font-size: 16px;
-      line-height: 28px;
+      font-size: 1rem;
+      line-height: 1.75rem;
       text-decoration: none;
       color: $primary;
       display: flex;
@@ -339,43 +310,19 @@
   }
 
   h2 {
-    font-family: 'Yantramanav';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 39px;
-    color: $primary;
     margin-bottom: 24px;
   }
 
   h3 {
-    font-family: 'Yantramanav';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 31px;
-    color: $primary;
     margin-bottom: 24px;
   }
 
   h4 {
-    font-family: 'Work Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 28px;
-    color: $primary;
     flex-grow: 1;
     margin-bottom: 16px;
   }
 
   P {
-    font-family: 'Work Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 28px;
-    color: $primary;
     margin-bottom: 24px;
   }
 }
@@ -402,8 +349,8 @@
   font-family: 'Work Sans';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
   color: $primary-green;
   padding: 10px 0;
 
@@ -446,7 +393,7 @@
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 iframe {
